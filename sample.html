@@ -1,0 +1,1691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KISS - Keep It Simple School</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            overflow-x: hidden;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: #111;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #8a2be2;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo i {
+            margin-right: 10px;
+            animation: pulse 2s infinite;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+            position: relative;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+        }
+        
+        .nav-links a:hover {
+            color: #8a2be2;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #8a2be2;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(138, 43, 226, 0.2) 0%, transparent 50%);
+            z-index: 1;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #fff;
+            animation: fadeInDown 1s ease;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            color: #ddd;
+            animation: fadeInUp 1s ease 0.3s both;
+        }
+        
+        .typing-text {
+            font-size: 24px;
+            margin-bottom: 30px;
+            min-height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .cursor {
+            display: inline-block;
+            width: 3px;
+            background-color: #8a2be2;
+            margin-left: 5px;
+            animation: blink 1s infinite;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: #8a2be2;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            animation: fadeIn 1s ease 0.6s both;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-button:hover {
+            background-color: #6a1cb0;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(106, 28, 176, 0.3);
+        }
+        
+        .cta-button:active {
+            transform: translateY(-1px);
+        }
+        
+        .floating-elements {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .floating-element {
+            position: absolute;
+            color: rgba(255, 255, 255, 0.1);
+            font-size: 24px;
+            animation: float 15s infinite linear;
+        }
+        
+        /* Courses Section */
+        .courses {
+            padding: 80px 0;
+            background-color: #fff;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-size: 36px;
+            color: #222;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: #8a2be2;
+        }
+        
+        .section-title p {
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .course-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+            gap: 30px;
+        }
+        
+        .course-card {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s;
+            cursor: pointer;
+            border-left: 4px solid #8a2be2;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .course-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(138, 43, 226, 0.1), transparent);
+            transition: left 0.5s;
+        }
+        
+        .course-card:hover::before {
+            left: 100%;
+        }
+        
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .course-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #222;
+        }
+        
+        .course-card p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .course-link {
+            color: #8a2be2;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            position: relative;
+        }
+        
+        .course-link::after {
+            content: "→";
+            margin-left: 5px;
+            transition: margin-left 0.3s;
+        }
+        
+        .course-link:hover::after {
+            margin-left: 10px;
+        }
+        
+        /* Course Content */
+        .course-content {
+            padding: 80px 0;
+            background-color: #fff;
+            display: none;
+        }
+        
+        .course-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        .modules {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .module-card {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s;
+            cursor: pointer;
+            border-left: 4px solid #8a2be2;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .module-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .module-number {
+            display: inline-block;
+            background-color: #f0e6ff;
+            color: #8a2be2;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            transition: all 0.3s;
+        }
+        
+        .module-card:hover .module-number {
+            transform: scale(1.1);
+            background-color: #8a2be2;
+            color: white;
+        }
+        
+        .module-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #222;
+        }
+        
+        .module-card p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .module-link {
+            color: #8a2be2;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+        }
+        
+        .module-link::after {
+            content: "→";
+            margin-left: 5px;
+            transition: margin-left 0.3s;
+        }
+        
+        .module-link:hover::after {
+            margin-left: 10px;
+        }
+        
+        /* Module Content */
+        .module-content {
+            background-color: #fff;
+            padding: 80px 0;
+            border-top: 1px solid #eee;
+            display: none;
+        }
+        
+        .module-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        .module-header {
+            margin-bottom: 40px;
+        }
+        
+        .module-header h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+            color: #222;
+        }
+        
+        .module-header p {
+            color: #666;
+            font-size: 18px;
+        }
+        
+        .lesson {
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #eee;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.5s ease forwards;
+        }
+        
+        .lesson:nth-child(1) { animation-delay: 0.1s; }
+        .lesson:nth-child(2) { animation-delay: 0.2s; }
+        .lesson:nth-child(3) { animation-delay: 0.3s; }
+        .lesson:nth-child(4) { animation-delay: 0.4s; }
+        .lesson:nth-child(5) { animation-delay: 0.5s; }
+        
+        .lesson:last-child {
+            border-bottom: none;
+        }
+        
+        .lesson h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #222;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .lesson h3::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: #8a2be2;
+        }
+        
+        .lesson p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+        
+        .lesson ul, .lesson ol {
+            margin-bottom: 20px;
+            padding-left: 25px;
+        }
+        
+        .lesson li {
+            margin-bottom: 10px;
+            color: #555;
+            position: relative;
+        }
+        
+        .lesson li::before {
+            content: '▹';
+            color: #8a2be2;
+            position: absolute;
+            left: -15px;
+        }
+        
+        .code-block {
+            background-color: #1e1e1e;
+            color: #d4d4d4;
+            border-left: 4px solid #8a2be2;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 4px 4px 0;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            position: relative;
+        }
+        
+        .code-block::before {
+            content: 'Code';
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: #8a2be2;
+            color: white;
+            padding: 5px 10px;
+            font-size: 12px;
+            border-bottom-left-radius: 4px;
+        }
+        
+        .code-block code {
+            color: #d4d4d4;
+        }
+        
+        .command {
+            color: #569cd6;
+        }
+        
+        .comment {
+            color: #6a9955;
+        }
+        
+        .back-button {
+            display: inline-block;
+            background-color: #f5f7fa;
+            color: #8a2be2;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 30px;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .back-button:hover {
+            background-color: #e9f0fa;
+            transform: translateX(-5px);
+        }
+        
+        .back-button i {
+            margin-right: 5px;
+        }
+        
+        /* Course Details */
+        .course-details {
+            background-color: #fff;
+            padding: 80px 0;
+            border-top: 1px solid #eee;
+        }
+        
+        .details-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .details-container h2 {
+            font-size: 32px;
+            margin-bottom: 30px;
+            color: #222;
+        }
+        
+        .details-container h3 {
+            font-size: 24px;
+            margin: 40px 0 20px;
+            color: #222;
+        }
+        
+        .details-container p {
+            margin-bottom: 20px;
+            color: #555;
+        }
+        
+        .details-container ul {
+            margin-bottom: 30px;
+            padding-left: 20px;
+        }
+        
+        .details-container li {
+            margin-bottom: 10px;
+            color: #555;
+        }
+        
+        /* FAQ Section */
+        .faq-section {
+            background-color: #fff;
+            padding: 80px 0;
+            border-top: 1px solid #eee;
+            display: none;
+        }
+        
+        .faq-section.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        .faq-item {
+            margin-bottom: 20px;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+        
+        .faq-item:hover {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .faq-question {
+            background-color: #f9f9f9;
+            padding: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+        
+        .faq-question:hover {
+            background-color: #f0e6ff;
+        }
+        
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        
+        .faq-answer.active {
+            padding: 20px;
+            max-height: 500px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #111;
+            color: #fff;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column {
+            flex: 1;
+            min-width: 200px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-column h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        
+        .footer-links a:hover {
+            color: #8a2be2;
+            transform: translateX(5px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #444;
+            color: #aaa;
+            font-size: 14px;
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-1000px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        @keyframes typewriter {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        
+        /* Text Animation Classes */
+        .text-reveal {
+            overflow: hidden;
+            white-space: nowrap;
+            animation: typewriter 2s steps(40, end);
+        }
+        
+        .bounce {
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+        
+        .wiggle {
+            display: inline-block;
+            animation: wiggle 2.5s infinite;
+        }
+        
+        @keyframes wiggle {
+            0% { transform: rotate(0); }
+            5% { transform: rotate(-5deg); }
+            10% { transform: rotate(5deg); }
+            15% { transform: rotate(-5deg); }
+            20% { transform: rotate(5deg); }
+            25% { transform: rotate(0); }
+            100% { transform: rotate(0); }
+        }
+        
+        .highlight {
+            background: linear-gradient(120deg, #8a2be2, #8a2be2);
+            background-repeat: no-repeat;
+            background-size: 100% 0.2em;
+            background-position: 0 88%;
+            transition: background-size 0.25s ease-in;
+        }
+        
+        .highlight:hover {
+            background-size: 100% 88%;
+            color: white;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                padding: 15px 0;
+            }
+            
+            .nav-links {
+                margin-top: 15px;
+            }
+            
+            .nav-links li {
+                margin-left: 15px;
+                margin-right: 15px;
+            }
+            
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+            
+            .course-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .modules {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo" id="home-link">
+                    <i class="fas fa-graduation-cap"></i> KISS
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#course-details">Details</a></li>
+                    <li><a href="#faq-section">FAQ</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="floating-elements">
+            <!-- Floating elements will be added via JavaScript -->
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h1>KISS - <span class="highlight">Keep It Simple School</span></h1>
+                <div class="typing-text" id="typing-text">
+                    <!-- Text will be typed here via JavaScript -->
+                </div>
+                <p>Learn web development and cybersecurity with our completely free courses. No prior experience required.</p>
+                <a href="#courses" class="cta-button">Explore Courses <i class="fas fa-arrow-down"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section class="courses" id="courses">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Courses</h2>
+                <p>Choose from our selection of completely free courses designed for beginners</p>
+            </div>
+            <div class="course-cards">
+                <!-- HTML Course -->
+                <div class="course-card" data-course="html">
+                    <h3><i class="fab fa-html5 wiggle" style="color: #e34c26;"></i> Master HTML from Scratch</h3>
+                    <p>A comprehensive, completely free course to learn HTML from the ground up. Build your first website and understand the foundation of web development.</p>
+                    <a class="course-link">Start Learning HTML</a>
+                </div>
+                
+                <!-- Kali Linux Course -->
+                <div class="course-card" data-course="kali">
+                    <h3><i class="fas fa-shield-alt bounce"></i> Kali Linux for Ethical Hacking</h3>
+                    <p>Penetration testing and vulnerability assessment for network security. Learn ethical hacking techniques using the industry-standard Kali Linux distribution.</p>
+                    <a class="course-link">Start Learning Kali Linux</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HTML Course Content -->
+    <section class="course-content" id="html-course">
+        <div class="container">
+            <button class="back-button"><i class="fas fa-arrow-left"></i> Back to Courses</button>
+            <div class="section-title">
+                <h2>Master HTML from Scratch</h2>
+                <p>Structured learning path from beginner to advanced HTML concepts</p>
+            </div>
+            <div class="modules">
+                <!-- Module 1 -->
+                <div class="module-card" data-module="html-1">
+                    <div class="module-number">1</div>
+                    <h3>HTML Basics</h3>
+                    <p>Learn the fundamental building blocks of HTML, including tags, elements, and document structure.</p>
+                    <a class="module-link">Start Module</a>
+                </div>
+                
+                <!-- Module 2 -->
+                <div class="module-card" data-module="html-2">
+                    <div class="module-number">2</div>
+                    <h3>Text Formatting</h3>
+                    <p>Master text elements, headings, paragraphs, lists, and semantic text markup.</p>
+                    <a class="module-link">Start Module</a>
+                </div>
+                
+                <!-- Module 3 -->
+                <div class="module-card" data-module="html-3">
+                    <div class="module-number">3</div>
+                    <h3>Links and Navigation</h3>
+                    <p>Create hyperlinks, navigation menus, and understand URL structures.</p>
+                    <a class="module-link">Start Module</a>
+                </div>
+                
+                <!-- Module 4 -->
+                <div class="module-card" data-module="html-4">
+                    <div class="module-number">4</div>
+                    <h3>Images and Media</h3>
+                    <p>Embed images, audio, and video content into your web pages.</p>
+                    <a class="module-link">Start Module</a>
+                </div>
+                
+                <!-- Module 5 -->
+                <div class="module-card" data-module="html-5">
+                    <div class="module-number">5</div>
+                    <h3>Tables</h3>
+                    <p>Create structured data tables with headers, rows, columns, and captions.</p>
+                    <a class="module-link">Start Module</a>
+                </div>
+                
+                <!-- Module 6 -->
+                <div class="module-card" data-module="html-6">
+                    <div class="module-number">6</div>
+                    <h3>Forms and Input</h3>
+                    <p>Build interactive forms with various input types, labels, and validation.</p>
+                    <a class="module-link">Start Module</a>
+                </div>
+                
+                <!-- Module 7 -->
+                <div class="module-card" data-module="html-7">
+                    <div class="module-number">7</div>
+                    <h3>Semantic HTML</h3>
+                    <p>Use semantic elements to create meaningful, accessible web structures.</p>
+                    <a class="module-link">Start Module</a>
+                </div>
+                
+                <!-- Module 8 -->
+                <div class="module-card" data-module="html-8">
+                    <div class="module-number">8</div>
+                    <h3>HTML5 Features</h3>
+                    <p>Explore advanced HTML5 elements, APIs, and modern web capabilities.</p>
+                    <a class="module-link">Start Module</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kali Linux Course Content -->
+    <section class="course-content" id="kali-course">
+        <div class="container">
+            <button class="back-button"><i class="fas fa-arrow-left"></i> Back to Courses</button>
+            <div class="section-title">
+                <h2>Kali Linux for Ethical Hacking</h2>
+                <p>Structured learning path from Kali Linux basics to advanced penetration testing</p>
+            </div>
+            <div class="modules">
+                <!-- Module 1 -->
+                <div class="module-card" data-module="kali-1">
+                    <div class="module-number">1</div>
+                    <h3>Introduction to Kali Linux</h3>
+                    <p>Learn about Kali Linux, its purpose in ethical hacking, and how to set up your environment.</p>
+                    <a class="module-link">Start Module</a>
+                </div>
+                
+                <!-- Module 2 -->
+                <div class="module-card" data-module="kali-2">
+                    <div class="module-number">2</div>
+                    <h3>Information Gathering</h3>
+                    <p>Master reconnaissance techniques to gather intelligence about target systems.</p>
+                    <a class="module-link">Start Module</a>
+                </div>
+                
+                <!-- Module 3 -->
+                <div class="module-card" data-module="kali-3">
+                    <div class="module-number">3</div>
+                    <h3>Vulnerability Analysis</h3>
+                    <p>Learn to identify and assess security vulnerabilities in systems and networks.</p>
+                    <a class="module-link">Start Module</a>
+                </div>
+                
+                <!-- Module 4 -->
+                <div class="module-card" data-module="kali-4">
+                    <div class="module-number">4</div>
+                    <h3>Web Application Testing</h3>
+                    <p>Discover and exploit vulnerabilities in web applications and services.</p>
+                    <a class="module-link">Start Module</a>
+                </div>
+                
+                <!-- Module 5 -->
+                <div class="module-card" data-module="kali-5">
+                    <div class="module-number">5</div>
+                    <h3>Database Assessment</h3>
+                    <p>Learn techniques to test database security and identify potential weaknesses.</p>
+                    <a class="module-link">Start Module</a>
+                </div>
+                
+                <!-- Module 6 -->
+                <div class="module-card" data-module="kali-6">
+                    <div class="module-number">6</div>
+                    <h3>Password Attacks</h3>
+                    <p>Master various password cracking techniques and tools available in Kali Linux.</p>
+                    <a class="module-link">Start Module</a>
+                </div>
+                
+                <!-- Module 7 -->
+                <div class="module-card" data-module="kali-7">
+                    <div class="module-number">7</div>
+                    <h3>Wireless Attacks</h3>
+                    <p>Learn to assess and exploit vulnerabilities in wireless networks.</p>
+                    <a class="module-link">Start Module</a>
+                </div>
+                
+                <!-- Module 8 -->
+                <div class="module-card" data-module="kali-8">
+                    <div class="module-number">8</div>
+                    <h3>Exploitation & Post-Exploitation</h3>
+                    <p>Master exploitation techniques and maintaining access after successful penetration.</p>
+                    <a class="module-link">Start Module</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HTML Module Content -->
+    <!-- Module 1 Content -->
+    <section class="module-content" id="module-html-1">
+        <div class="container">
+            <button class="back-button"><i class="fas fa-arrow-left"></i> Back to Modules</button>
+            <div class="module-header">
+                <h2>Module 1: HTML Basics</h2>
+                <p>Learn the fundamental building blocks of HTML, including tags, elements, and document structure.</p>
+            </div>
+            
+            <div class="lesson">
+                <h3>What is HTML?</h3>
+                <p>HTML (HyperText Markup Language) is the standard language used to create and structure content on the web. It forms the backbone of every website, defining elements like text, images, links, and layout to make content visible and organized in browsers.</p>
+                <p>HTML elements are the building blocks of HTML pages and are represented by tags.</p>
+                <p>Provides the basic framework for all web pages.<br>
+Uses opening and closing tags to define elements.<br>
+Allows adding hyperlinks, images, audio, and video.<br>
+Attributes give extra information about elements like src, href, or alt.<br>
+HTTP is the mechanism by which HTML documents are transported across the internet.</p>
+            </div>
+            
+            <div class="lesson">
+                <h3>Basic HTML Document Structure</h3>
+                <p>Every HTML document follows a basic structure:</p>
+                <div class="code-block">
+                    &lt;!DOCTYPE html&gt;<br>
+                    &lt;html&gt;<br>
+                    &lt;head&gt;<br>
+                    &nbsp;&nbsp;&lt;title&gt;Page Title&lt;/title&gt;<br>
+                    &lt;/head&gt;<br>
+                    &lt;body&gt;<br>
+                    &nbsp;&nbsp;&lt;h1&gt;My First Heading&lt;/h1&gt;<br>
+                    &nbsp;&nbsp;&lt;p&gt;My first paragraph.&lt;/p&gt;<br>
+                    &lt;/body&gt;<br>
+                    &lt;/html&gt;
+                </div>
+                <p>Let's break down each part:</p>
+                <ul>
+                    <li><strong>&lt;!DOCTYPE html&gt;</strong>: Declares the document type and version of HTML</li>
+                    <li><strong>&lt;html&gt;</strong>: The root element of an HTML page</li>
+                    <li><strong>&lt;head&gt;</strong>: Contains meta information about the document</li>
+                    <li><strong>&lt;title&gt;</strong>: Specifies a title for the document</li>
+                    <li><strong>&lt;body&gt;</strong>: Contains the visible page content</li>
+                </ul>
+            </div>
+            
+            <div class="lesson">
+                <h3>HTML Elements and Tags</h3>
+                <p>HTML elements are defined by a start tag, some content, and an end tag:</p>
+                <div class="code-block">
+                    &lt;tagname&gt;Content goes here...&lt;/tagname&gt;
+                </div>
+                <p>Examples of HTML elements:</p>
+                <div class="code-block">
+                    &lt;h1&gt;This is a heading&lt;/h1&gt;<br>
+                    &lt;p&gt;This is a paragraph.&lt;/p&gt;<br>
+                    &lt;a href="https://www.example.com"&gt;This is a link&lt;/a&gt;
+                </div>
+                <p>Some important points about HTML elements:</p>
+                <ul>
+                    <li>HTML tags are not case sensitive, but lowercase is recommended</li>
+                    <li>Some elements are empty (have no content and no closing tag)</li>
+                    <li>Elements can be nested (contain other elements)</li>
+                </ul>
+            </div>
+            
+            <div class="lesson">
+                <h3>HTML Attributes</h3>
+                <p>Attributes provide additional information about HTML elements. They are always specified in the start tag and usually come in name/value pairs like name="value".</p>
+                <div class="code-block">
+                    &lt;a href="https://www.example.com"&gt;Visit Example.com&lt;/a&gt;
+                </div>
+                <p>In this example, <code>href</code> is an attribute that specifies the URL the link goes to.</p>
+                <p>Common attributes include:</p>
+                <ul>
+                    <li><strong>id</strong>: Specifies a unique id for an element</li>
+                    <li><strong>class</strong>: Specifies one or more class names for an element</li>
+                    <li><strong>style</strong>: Specifies an inline CSS style for an element</li>
+                    <li><strong>src</strong>: Specifies the source for embedded content</li>
+                    <li><strong>alt</strong>: Specifies alternative text for images</li>
+                </ul>
+            </div>
+            
+            <div class="lesson">
+                <h3>Practice Exercise</h3>
+                <p>Create a simple HTML page with the following elements:</p>
+                <ol>
+                    <li>A heading with your name</li>
+                    <li>A paragraph introducing yourself</li>
+                    <li>A link to your favorite website</li>
+                </ol>
+                <p>Save the file with a .html extension and open it in your browser to see the result.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional HTML modules would go here... -->
+
+    <!-- Kali Linux Module Content -->
+    <!-- Module 1 Content -->
+    <section class="module-content" id="module-kali-1">
+        <div class="container">
+            <button class="back-button"><i class="fas fa-arrow-left"></i> Back to Modules</button>
+            <div class="module-header">
+                <h2>Module 1: Introduction to Kali Linux</h2>
+                <p>Learn about Kali Linux, its purpose in ethical hacking, and how to set up your environment.</p>
+            </div>
+            
+            <div class="lesson">
+                <h3>What is Kali Linux?</h3>
+                <p>Kali Linux is a Debian-based Linux distribution specifically designed for digital forensics and penetration testing. It comes pre-installed with numerous security and forensics tools.</p>
+                <p>Key features of Kali Linux:</p>
+                <ul>
+                    <li>More than 600 penetration testing tools pre-installed</li>
+                    <li>Free and always will be</li>
+                    <li>Open source Git tree for transparency</li>
+                    <li>FHS compliant for easy file navigation</li>
+                    <li>Wide-ranging wireless device support</li>
+                    <li>Custom kernel patched for injection</li>
+                    <li>Developed in a secure environment</li>
+                    <li>GPG signed packages and repositories</li>
+                    <li>Multi-language support</li>
+                    <li>Completely customizable</li>
+                </ul>
+            </div>
+            <div class="lesson">
+                <h3>Structure</h3>
+                <p>In this module, we will cover the following topics:</p>
+                
+                <ul>
+                    <li>More than 600 penetration testing tools pre-installed</li>
+                    <li>Free and always will be</li>
+                    <li>Open source Git tree for transparency</li>
+                    <li>FHS compliant for easy file navigation</li>
+                    <li>Wide-ranging wireless device support</li>
+                    <li>Custom kernel patched for injection</li>
+                    <li>Developed in a secure environment</li>
+                    <li>GPG signed packages and repositories</li>
+                    <li>Customizing your Kali Linux environment</li>
+                    <li>Package management in Kali Linux</li>
+                    <li>Updating and upgrading Kali Linux</li>
+                </ul>
+            </div>
+            <div class="lesson">
+                <h3>Installing Kali Linux</h3>
+                <p>There are several ways to install and use Kali Linux:</p>
+                
+                <h4>Option 1: Bare Metal Installation</h4>
+                <p>Direct installation on your computer hardware. This provides the best performance but requires dedicating a machine to Kali Linux.</p>
+                
+                <h4>Option 2: Virtual Machine</h4>
+                <p>Install Kali Linux as a virtual machine using software like VirtualBox or VMware. This is the recommended approach for beginners.</p>
+                
+                <h4>Option 3: Live Boot</h4>
+                <p>Boot Kali Linux from a USB drive without installing it on your hard drive. Your changes won't persist after shutdown.</p>
+                
+                <h4>Option 4: Kali Linux on WSL</h4>
+                <p>Run Kali Linux through Windows Subsystem for Linux (WSL). Limited functionality compared to full installation.</p>
+                
+                <h4>Option 5: Cloud Image</h4>
+                <p>Run Kali Linux on cloud platforms like AWS, Azure, or Google Cloud.</p>
+            </div>
+            
+            <div class="lesson">
+                <h3>Basic Kali Linux Commands</h3>
+                <p>Essential commands for navigating and using Kali Linux:</p>
+                <div class="code-block">
+                    <span class="command">pwd</span> <span class="comment"># Print working directory</span><br>
+                    <span class="command">ls</span> <span class="comment"># List directory contents</span><br>
+                    <span class="command">cd</span> <span class="comment"># Change directory</span><br>
+                    <span class="command">mkdir</span> <span class="comment"># Create a new directory</span><br>
+                    <span class="command">rm</span> <span class="comment"># Remove files or directories</span><br>
+                    <span class="command">cp</span> <span class="comment"># Copy files or directories</span><br>
+                    <span class="command">mv</span> <span class="comment"># Move or rename files</span><br>
+                    <span class="command">cat</span> <span class="comment"># Display file contents</span><br>
+                    <span class="command">grep</span> <span class="comment"># Search for patterns in files</span><br>
+                    <span class="command">chmod</span> <span class="comment"># Change file permissions</span><br>
+                    <span class="command">sudo</span> <span class="comment"># Execute command as superuser</span><br>
+                    <span class="command">apt update</span> <span class="comment"># Update package lists</span><br>
+                    <span class="command">apt upgrade</span> <span class="comment"># Upgrade installed packages</span>
+                </div>
+            </div>
+            
+            <div class="lesson">
+                <h3>Kali Linux Tools Overview</h3>
+                <p>Kali Linux includes tools organized into various categories:</p>
+                <ul>
+                    <li><strong>Information Gathering</strong>: Nmap, Recon-ng, Maltego</li>
+                    <li><strong>Vulnerability Analysis</strong>: OpenVAS, Nikto, Lynis</li>
+                    <li><strong>Web Application Analysis</strong>: Burp Suite, OWASP ZAP, SQLmap</li>
+                    <li><strong>Database Assessment</strong>: SQLmap, Sqlninja, Oscanner</li>
+                    <li><strong>Password Attacks</strong>: John the Ripper, Hashcat, Hydra</li>
+                    <li><strong>Wireless Attacks</strong>: Aircrack-ng, Kismet, Wifite</li>
+                    <li><strong>Reverse Engineering</strong>: Ghidra, Radare2, JD-GUI</li>
+                    <li><strong>Exploitation Tools</strong>: Metasploit Framework, BeEF, Social Engineer Toolkit</li>
+                    <li><strong>Sniffing & Spoofing</strong>: Wireshark, Ettercap, Bettercap</li>
+                    <li><strong>Post Exploitation</strong>: Meterpreter, Powersploit, Empire</li>
+                    <li><strong>Forensics</strong>: Autopsy, Binwalk, Volatility</li>
+                    <li><strong>Reporting Tools</strong>: Dradis, Metagoofil, Faraday</li>
+                </ul>
+            </div>
+            
+            <div class="lesson">
+                <h3>Practice Exercise</h3>
+                <p>Set up your Kali Linux environment:</p>
+                <ol>
+                    <li>Download Kali Linux from the official website</li>
+                    <li>Install it in a virtual machine (VirtualBox recommended)</li>
+                    <li>Update the system with <code>sudo apt update && sudo apt upgrade</code></li>
+                    <li>Familiarize yourself with the Kali Linux interface</li>
+                    <li>Practice basic Linux commands in the terminal</li>
+                    <li>Explore the different tool categories in the applications menu</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Kali Linux modules would go here... -->
+
+    <!-- Course Details -->
+    <section class="course-details" id="course-details">
+        <div class="container">
+            <div class="details-container">
+                <h2>About KISS</h2>
+                <p>KISS (Keep It Simple School) is a free online learning platform dedicated to making quality education accessible to everyone. We believe in providing comprehensive, practical courses that focus on real-world skills.</p>
+                
+                <h3>Our Mission</h3>
+                <p>To democratize education by providing high-quality, completely free courses in technology and cybersecurity. We believe that everyone should have access to the skills needed to succeed in today's digital world.</p>
+                
+                <h3>Our Approach</h3>
+                <p>All our courses follow the "Keep It Simple" philosophy:</p>
+                <ul>
+                    <li>Clear, structured learning paths</li>
+                    <li>Practical, hands-on exercises</li>
+                    <li>No unnecessary complexity</li>
+                    <li>Focus on real-world applications</li>
+                    <li>Completely free with no hidden costs</li>
+                </ul>
+                
+                <h3>What We Offer</h3>
+                <p>Currently, KISS offers two comprehensive courses:</p>
+                <ul>
+                    <li><strong>Master HTML from Scratch</strong>: A complete web development foundation course</li>
+                    <li><strong>Kali Linux for Ethical Hacking</strong>: A cybersecurity and penetration testing course</li>
+                </ul>
+                <p>We're continuously working to add more courses to help you build in-demand skills.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+                <p>Find answers to common questions about KISS and our courses</p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Are KISS courses really free?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, absolutely! All KISS courses are completely free with no hidden costs or subscription fees. We believe in making quality education accessible to everyone.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Do I need any prior experience?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>No prior experience is required for any of our courses. We design all courses for absolute beginners and gradually build up to more advanced concepts.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>What tools do I need to get started?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>For HTML course:
+                    <ul>
+                        <li>A modern web browser (Chrome, Firefox, Safari, or Edge)</li>
+                        <li>A text editor (VS Code is recommended)</li>
+                    </ul>
+                    For Kali Linux course:
+                    <ul>
+                        <li>A computer with at least 8GB RAM (16GB recommended)</li>
+                        <li>Virtualization software (VirtualBox or VMware)</li>
+                        <li>Kali Linux ISO image</li>
+                    </ul>
+                    All required software is free and open source.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>How long does it take to complete a course?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Courses are self-paced. Most students complete:
+                    <ul>
+                        <li>HTML course: 2-4 weeks (1-2 hours per day)</li>
+                        <li>Kali Linux course: 4-8 weeks (5-10 hours per week)</li>
+                    </ul>
+                    You can learn at your own pace and schedule.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Will I get a certificate after completing a course?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>While we don't provide formal certificates, you'll gain practical skills that you can showcase in your portfolio. The knowledge and hands-on experience you gain are what truly matter for career advancement.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Can I use these skills in real-world scenarios?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Absolutely! After completing our courses, you'll have practical skills for:
+                    <ul>
+                        <li>Building websites and web applications (HTML course)</li>
+                        <li>Performing basic security assessments (Kali Linux course)</li>
+                    </ul>
+                    For ethical hacking skills, always ensure you have explicit written permission before testing any system you don't own.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>What should I learn after these courses?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>After HTML:
+                    <ol>
+                        <li><strong>CSS</strong> - for styling and layout</li>
+                        <li><strong>JavaScript</strong> - for interactivity</li>
+                        <li><strong>Responsive Design</strong> - for mobile-friendly websites</li>
+                    </ol>
+                    After Kali Linux:
+                    <ol>
+                        <li><strong>Advanced Penetration Testing</strong> - complex attack scenarios</li>
+                        <li><strong>Digital Forensics</strong> - investigating security incidents</li>
+                        <li><strong>Network Defense</strong> - implementing security controls</li>
+                    </ol></p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>How can I practice these skills legally and safely?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>For web development:
+                    <ul>
+                        <li>Build personal projects and portfolios</li>
+                        <li>Contribute to open source projects</li>
+                    </ul>
+                    For ethical hacking:
+                    <ul>
+                        <li>Set up your own lab with virtual machines</li>
+                        <li>Use intentionally vulnerable applications (DVWA, Metasploitable)</li>
+                        <li>Join Capture The Flag (CTF) competitions</li>
+                        <li>Use dedicated practice platforms (Hack The Box, TryHackMe)</li>
+                        <li>Never test systems without explicit permission!</li>
+                    </ul></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>KISS - Keep It Simple School</h3>
+                    <ul class="footer-links">
+                        <li><a href="#courses">Courses</a></li>
+                        <li><a href="#course-details">About</a></li>
+                        <li><a href="#faq-section">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://www.kali.org" target="_blank">Kali Linux Official</a></li>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">MDN HTML Docs</a></li>
+                        <li><a href="mailto:rohan18gopal@gmail.com?subject=Feedback%20on%20KISS%20Courses&body=Hello,%20I%20would%20like%20to%20share%20my%20feedback...">Send Feedback</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Connect</h3>
+                    <ul class="footer-links">
+                        <li><a href="mailto:rohan18gopal@gmail.com">rohan18gopal@gmail.com</a></li>
+                        <li><a href="mailto:arnoldjevinz@gmail.com">arnoldjevinz@gmail.com</a></li>
+                        <li><a href="https://www.instagram.com/keepitsimpleschool?igsh=MWZ4NDUzZG1vYXRkMQ==" target="_blank">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 KISS - Keep It Simple School. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Typing animation
+        const typingText = document.getElementById('typing-text');
+        const texts = [
+            "Learn Web Development",
+            "Master Cybersecurity",
+            "Build Real Projects",
+            "Start Your Tech Career"
+        ];
+        let textIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        
+        function type() {
+            const currentText = texts[textIndex];
+            
+            if (isDeleting) {
+                typingText.innerHTML = currentText.substring(0, charIndex - 1) + '<span class="cursor">|</span>';
+                charIndex--;
+            } else {
+                typingText.innerHTML = currentText.substring(0, charIndex + 1) + '<span class="cursor">|</span>';
+                charIndex++;
+            }
+            
+            if (!isDeleting && charIndex === currentText.length) {
+                isDeleting = true;
+                setTimeout(type, 1500);
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                textIndex = (textIndex + 1) % texts.length;
+                setTimeout(type, 500);
+            } else {
+                setTimeout(type, isDeleting ? 50 : 100);
+            }
+        }
+        
+        // Start typing animation
+        setTimeout(type, 1000);
+        
+        // Create floating elements
+        const floatingContainer = document.querySelector('.floating-elements');
+        const icons = ['</>', '{ }', '&lt;/&gt;', '#', '&', '*', '{}', '[]'];
+        
+        for (let i = 0; i < 15; i++) {
+            const element = document.createElement('div');
+            element.className = 'floating-element';
+            element.textContent = icons[Math.floor(Math.random() * icons.length)];
+            element.style.left = Math.random() * 100 + '%';
+            element.style.animationDelay = Math.random() * 15 + 's';
+            element.style.fontSize = (Math.random() * 20 + 10) + 'px';
+            floatingContainer.appendChild(element);
+        }
+        
+        // Course navigation
+        document.querySelectorAll('.course-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const course = this.getAttribute('data-course');
+                
+                // Hide all course contents and FAQ
+                document.querySelectorAll('.course-content').forEach(content => {
+                    content.classList.remove('active');
+                });
+                document.getElementById('faq-section').classList.remove('active');
+                
+                // Show selected course
+                document.getElementById(`${course}-course`).classList.add('active');
+                
+                // Scroll to course
+                document.getElementById(`${course}-course`).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Module navigation
+        document.querySelectorAll('.module-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const moduleId = this.getAttribute('data-module');
+                
+                // Hide all module contents and FAQ
+                document.querySelectorAll('.module-content').forEach(content => {
+                    content.classList.remove('active');
+                });
+                document.getElementById('faq-section').classList.remove('active');
+                
+                // Show selected module
+                document.getElementById(`module-${moduleId}`).classList.add('active');
+                
+                // Scroll to module
+                document.getElementById(`module-${moduleId}`).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Back button functionality
+        document.querySelectorAll('.back-button').forEach(button => {
+            button.addEventListener('click', function() {
+                // Hide all module contents and FAQ
+                document.querySelectorAll('.module-content').forEach(content => {
+                    content.classList.remove('active');
+                });
+                document.getElementById('faq-section').classList.remove('active');
+                
+                // If we're in a module, go back to course
+                // If we're in a course, go back to courses
+                const currentModule = document.querySelector('.module-content.active');
+                if (currentModule) {
+                    const courseId = currentModule.id.split('-')[1];
+                    document.getElementById(`${courseId}-course`).classList.add('active');
+                    document.getElementById(`${courseId}-course`).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                } else {
+                    // Scroll back to courses
+                    document.getElementById('courses').scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Home link functionality
+        document.getElementById('home-link').addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Hide all course and module contents and FAQ
+            document.querySelectorAll('.course-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            document.querySelectorAll('.module-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            document.getElementById('faq-section').classList.remove('active');
+            
+            // Scroll to top
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    // Hide all course and module contents when navigating to main sections
+                    if(targetId !== '#courses') {
+                        document.querySelectorAll('.course-content').forEach(content => {
+                            content.classList.remove('active');
+                        });
+                        document.querySelectorAll('.module-content').forEach(content => {
+                            content.classList.remove('active');
+                        });
+                    }
+                    
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // FAQ functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function() {
+                const answer = this.nextElementSibling;
+                const isActive = answer.classList.contains('active');
+                
+                // Close all answers
+                document.querySelectorAll('.faq-answer').forEach(ans => {
+                    ans.classList.remove('active');
+                });
+                
+                // Toggle current answer
+                if (!isActive) {
+                    answer.classList.add('active');
+                }
+            });
+        });
+
+        // FAQ navigation
+        document.querySelector('a[href="#faq-section"]').addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Hide all course and module contents
+            document.querySelectorAll('.course-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            document.querySelectorAll('.module-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            // Show FAQ section
+            document.getElementById('faq-section').classList.add('active');
+            
+            // Scroll to FAQ
+            document.getElementById('faq-section').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+        
+        // Add highlight animation to important text on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('highlight-animate');
+                }
+            });
+        }, observerOptions);
+        
+        // Observe important headings
+        document.querySelectorAll('.section-title h2, .module-header h2, .lesson h3').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
